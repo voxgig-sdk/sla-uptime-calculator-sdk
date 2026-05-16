@@ -1,0 +1,140 @@
+# Entity: api
+
+main: kit: entity: api: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "daily_down"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "daily_down_sec"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "monthly_down"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "monthly_down_sec"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "nine"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "quarterly_down"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "quarterly_down_sec"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "sla"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "uptime_url"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "weekly_down"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "weekly_down_sec"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "yearly_down"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "yearly_down_sec"
+      req: false
+      type: "`$NUMBER`"
+    }
+  ]
+
+  name: "api"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          args: {
+            query: [
+              {
+                example: "1h20m"
+                kind: "query"
+                name: "down"
+                orig: "down"
+                reqd: false
+                type: "`$STRING`"
+              }
+              {
+                example: [
+                  8
+                  8
+                  8
+                  8
+                  8
+                  0
+                  0
+                ]
+                kind: "query"
+                name: "dur"
+                orig: "dur"
+                reqd: false
+                type: "`$ARRAY`"
+              }
+              {
+                example: 99.9
+                kind: "query"
+                name: "sla"
+                orig: "sla"
+                reqd: false
+                type: "`$NUMBER`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/api"
+          parts: [
+            "api"
+          ]
+          select: {
+            exist: [
+              "down"
+              "dur"
+              "sla"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,23 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        url: "https://uptime.is/about#api"
+      }
+      description: "The SLA Uptime Calculator API provides calculations for expected downtime based on specified uptime percentages. It supports both simple and complex calculations, allowing users to input downtime durations and receive corresponding SLA uptime percentages. Additionally, it can calculate acceptable downtime for different days of the week."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://get.uptime.is"
+        }
+      ]
+      title: "SLA Uptime Calculator"
+      version: "1.0.0"
+    }
+  }
+}
+
+}

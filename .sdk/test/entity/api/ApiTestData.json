@@ -1,0 +1,70 @@
+{
+  "existing": {
+    "api": {
+      "API00": {
+        "daily_down": "s82",
+        "daily_down_sec": 131,
+        "monthly_down": "s84",
+        "monthly_down_sec": 133,
+        "nine": "s86",
+        "quarterly_down": "s87",
+        "quarterly_down_sec": 136,
+        "sla": 137,
+        "uptime_url": "s8a",
+        "weekly_down": "s8b",
+        "weekly_down_sec": 140,
+        "yearly_down": "s8d",
+        "yearly_down_sec": 142
+      },
+      "API01": {
+        "daily_down": "s104",
+        "daily_down_sec": 261,
+        "monthly_down": "s106",
+        "monthly_down_sec": 263,
+        "nine": "s108",
+        "quarterly_down": "s109",
+        "quarterly_down_sec": 266,
+        "sla": 267,
+        "uptime_url": "s10c",
+        "weekly_down": "s10d",
+        "weekly_down_sec": 270,
+        "yearly_down": "s10f",
+        "yearly_down_sec": 272
+      },
+      "API02": {
+        "daily_down": "s186",
+        "daily_down_sec": 391,
+        "monthly_down": "s188",
+        "monthly_down_sec": 393,
+        "nine": "s18a",
+        "quarterly_down": "s18b",
+        "quarterly_down_sec": 396,
+        "sla": 397,
+        "uptime_url": "s18e",
+        "weekly_down": "s18f",
+        "weekly_down_sec": 400,
+        "yearly_down": "s191",
+        "yearly_down_sec": 402
+      }
+    }
+  },
+  "new": {
+    "api": {
+      "api_ref01": {
+        "daily_down": "s208",
+        "daily_down_sec": 521,
+        "monthly_down": "s20a",
+        "monthly_down_sec": 523,
+        "nine": "s20c",
+        "quarterly_down": "s20d",
+        "quarterly_down_sec": 526,
+        "sla": 527,
+        "uptime_url": "s210",
+        "weekly_down": "s211",
+        "weekly_down_sec": 530,
+        "yearly_down": "s213",
+        "yearly_down_sec": 532
+      }
+    }
+  }
+}

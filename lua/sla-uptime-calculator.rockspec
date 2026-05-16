@@ -1,0 +1,22 @@
+package = "voxgig-sdk-sla-uptime-calculator"
+version = "0.0-1"
+source = {
+  url = "git://github.com/voxgig-sdk/sla-uptime-calculator-sdk.git"
+}
+description = {
+  summary = "SlaUptimeCalculator SDK for Lua",
+  license = "MIT"
+}
+dependencies = {
+  "lua >= 5.3",
+  "dkjson >= 2.5",
+  "dkjson >= 2.5",
+}
+build = {
+  type = "builtin",
+  modules = {
+    ["sla-uptime-calculator_sdk"] = "sla-uptime-calculator_sdk.lua",
+    ["config"] = "config.lua",
+    ["features"] = "features.lua",
+  }
+}
