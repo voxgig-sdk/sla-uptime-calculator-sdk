@@ -3,7 +3,7 @@ package sdktest
 import (
 	"testing"
 
-	sdk "github.com/voxgig-sdk/sla-uptime-calculator-sdk"
+	sdk "github.com/voxgig-sdk/sla-uptime-calculator-sdk/go"
 )
 
 func TestCustomUtility(t *testing.T) {

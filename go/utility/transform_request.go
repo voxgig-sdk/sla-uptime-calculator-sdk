@@ -1,9 +1,9 @@
 package utility
 
 import (
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/utility/struct"
 
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/core"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/core"
 )
 
 func transformRequestUtil(ctx *core.Context) any {

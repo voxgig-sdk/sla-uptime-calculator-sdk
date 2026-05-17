@@ -14,7 +14,8 @@
         "weekly_down": "s8b",
         "weekly_down_sec": 140,
         "yearly_down": "s8d",
-        "yearly_down_sec": 142
+        "yearly_down_sec": 142,
+        "id": "API00"
       },
       "API01": {
         "daily_down": "s104",
@@ -29,7 +30,8 @@
         "weekly_down": "s10d",
         "weekly_down_sec": 270,
         "yearly_down": "s10f",
-        "yearly_down_sec": 272
+        "yearly_down_sec": 272,
+        "id": "API01"
       },
       "API02": {
         "daily_down": "s186",
@@ -44,7 +46,8 @@
         "weekly_down": "s18f",
         "weekly_down_sec": 400,
         "yearly_down": "s191",
-        "yearly_down_sec": 402
+        "yearly_down_sec": 402,
+        "id": "API02"
       }
     }
   },

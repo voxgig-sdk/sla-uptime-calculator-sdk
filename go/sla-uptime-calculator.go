@@ -1,10 +1,10 @@
 package voxgigslauptimecalculatorsdk
 
 import (
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/core"
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/entity"
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/feature"
-	_ "github.com/voxgig-sdk/sla-uptime-calculator-sdk/utility"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/core"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/entity"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/feature"
+	_ "github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

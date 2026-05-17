@@ -1,7 +1,7 @@
 package feature
 
 import (
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/core"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/core"
 )
 
 type BaseFeature struct {

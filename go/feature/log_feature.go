@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/core"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/core"
 )
 
 type LogFeature struct {

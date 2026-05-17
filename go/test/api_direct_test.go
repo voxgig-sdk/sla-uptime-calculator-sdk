@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/sla-uptime-calculator-sdk"
-	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/core"
+	sdk "github.com/voxgig-sdk/sla-uptime-calculator-sdk/go"
+	"github.com/voxgig-sdk/sla-uptime-calculator-sdk/go/core"
 )
 
 func TestApiDirect(t *testing.T) {

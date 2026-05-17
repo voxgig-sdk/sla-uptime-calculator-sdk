@@ -29,7 +29,7 @@ class Config {
 
 
   options = {
-    base: 'https://get.uptime.is',
+    base: '$$main.kit.info.servers.0.url$$',
 
     'AUTHBLOCK'headers: 'HEADERS',
 
