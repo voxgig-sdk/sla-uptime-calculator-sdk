@@ -15,9 +15,6 @@ module SlaUptimeCalculatorConfig
       },
       "options" => {
         "base" => "https://get.uptime.is",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },

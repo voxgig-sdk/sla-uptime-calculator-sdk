@@ -85,7 +85,6 @@ function api_basic_setup($extra)
         "SLAUPTIMECALCULATOR_TEST_API_ENTID" => $idmap,
         "SLAUPTIMECALCULATOR_TEST_LIVE" => "FALSE",
         "SLAUPTIMECALCULATOR_TEST_EXPLAIN" => "FALSE",
-        "SLAUPTIMECALCULATOR_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,7 +96,6 @@ function api_basic_setup($extra)
     if ($env["SLAUPTIMECALCULATOR_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["SLAUPTIMECALCULATOR_APIKEY"],
             ],
             $extra ?? [],
         ]);

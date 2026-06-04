@@ -16,7 +16,17 @@
           }
         ],
         "title": "SLA Uptime Calculator",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "tagline": "Convert SLA uptime percentages into allowed downtime across daily, weekly, monthly, quarterly and yearly windows",
+        "homepage": "https://uptime.is",
+        "docs_url": "https://uptime.is/about",
+        "license_short": "No formal licence published; ad hoc personal use appears unrestricted, commercial/heavy use requires contacting the operator.",
+        "license_md": "- No explicit licence is published for the API.\n- Ad hoc personal use is described as freely available with CORS enabled.\n- Commercial or heavy usage: the operator asks you to make contact (`uptime-mail@posteo.com`).\n- Attribution to [uptime.is](https://uptime.is) is courteous when redistributing results.",
+        "about_md": "[uptime.is](https://uptime.is) is a small calculator that converts a service-level agreement (SLA) uptime percentage into the matching amount of allowed downtime. The web UI and the JSON API both run on the same backend; this SDK wraps the JSON API exposed at `https://get.uptime.is/api`.\n\nWhat you get from the API:\n\n- Submit a target uptime percentage via `sla` (for example `sla=99.9`) and receive the corresponding allowable downtime for daily, weekly, monthly, quarterly and yearly periods.\n- Submit a downtime budget via `down` (in seconds, or as a formatted string such as `1h20m`) to get the SLA percentage it corresponds to.\n- Submit per-weekday operating hours via `dur` (repeated seven times) to compute downtime against a custom weekly schedule.\n- Responses are JSON, with human-readable durations and convenience URLs back into the uptime.is web view.\n\nOperational notes: only `GET` is supported. No authentication is required and CORS is enabled, so the API can be called directly from a browser. There is no published rate limit, but the operator asks heavy or commercial users to get in touch first.",
+        "entity_desc": {
+          "api": "The single calculation resource exposed at `GET https://get.uptime.is/api`, accepting `sla`, `down` or `dur` query parameters and returning JSON downtime/uptime breakdowns."
+        },
+        "auth": false
       },
       "config": {
         "auth": {
@@ -24,7 +34,15 @@
         },
         "headers": {
           "content-type": "application/json"
-        }
+        },
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ]
       },
       "entity": {
         "api": {
