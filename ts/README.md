@@ -10,7 +10,7 @@ The TypeScript SDK for the SlaUptimeCalculator API — a type-safe, entity-orien
 
 ## Install
 ```bash
-npm install sla-uptime-calculator
+npm install @voxgig-sdk/sla-uptime-calculator
 ```
 ## Tutorial: your first API call
 

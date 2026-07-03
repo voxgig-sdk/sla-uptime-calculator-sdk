@@ -10,7 +10,7 @@ The Lua SDK for the SlaUptimeCalculator API — an entity-oriented client using 
 
 ## Install
 ```bash
-luarocks install sla-uptime-calculator-sdk
+luarocks install voxgig-sdk-sla-uptime-calculator
 ```
 
 If the module is not yet published, add the source directory to

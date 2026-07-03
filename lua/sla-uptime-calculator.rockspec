@@ -8,12 +8,14 @@ source = {
   dir = "sla-uptime-calculator-sdk/lua"
 }
 description = {
-  summary = "SlaUptimeCalculator SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the SLA Uptime Calculator public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/sla-uptime-calculator-sdk",
+  issues_url = "https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "sla-uptime-calculator" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

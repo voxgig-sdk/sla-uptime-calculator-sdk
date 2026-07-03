@@ -10,13 +10,13 @@ The Ruby SDK for the SlaUptimeCalculator API — an entity-oriented client using
 
 ## Install
 ```bash
-gem install sla-uptime-calculator-sdk
+gem install voxgig-sdk-sla-uptime-calculator
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "sla-uptime-calculator-sdk"
+gem "voxgig-sdk-sla-uptime-calculator"
 ```
 
 Then run:

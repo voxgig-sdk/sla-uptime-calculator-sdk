@@ -1,8 +1,17 @@
 {
   "name": "voxgig-sdk/sla-uptime-calculator",
-  "description": "SlaUptimeCalculator SDK for PHP",
+  "description": "Unofficial generated PHP SDK for the SLA Uptime Calculator public API. Not affiliated with or endorsed by the upstream API provider.",
   "type": "library",
+  "keywords": ["voxgig", "sdk", "generated-sdk", "openapi", "api-client", "sla-uptime-calculator"],
+  "homepage": "https://github.com/voxgig-sdk/sla-uptime-calculator-sdk",
   "license": "MIT",
+  "authors": [
+    { "name": "Voxgig", "homepage": "https://voxgig.com" }
+  ],
+  "support": {
+    "issues": "https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/issues",
+    "source": "https://github.com/voxgig-sdk/sla-uptime-calculator-sdk"
+  },
   "minimum-stability": "stable",
   "require": {
     "php": ">=8.2"

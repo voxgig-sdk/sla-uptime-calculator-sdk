@@ -10,7 +10,7 @@ The Python SDK for the SlaUptimeCalculator API — an entity-oriented client fol
 
 ## Install
 ```bash
-pip install sla-uptime-calculator-sdk
+pip install voxgig-sdk-sla-uptime-calculator
 ```
 
 Or install from source:

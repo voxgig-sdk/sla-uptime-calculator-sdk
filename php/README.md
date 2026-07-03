@@ -10,7 +10,7 @@ The PHP SDK for the SlaUptimeCalculator API — an entity-oriented client using 
 
 ## Install
 ```bash
-composer require voxgig/sla-uptime-calculator-sdk
+composer require voxgig-sdk/sla-uptime-calculator
 ```
 
 
