@@ -1,21 +1,8 @@
 # SlaUptimeCalculator SDK
 
-Convert SLA uptime percentages into allowed downtime across daily, weekly, monthly, quarterly and yearly windows
+SLA Uptime Calculator client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About SLA Uptime Calculator
-
-[uptime.is](https://uptime.is) is a small calculator that converts a service-level agreement (SLA) uptime percentage into the matching amount of allowed downtime. The web UI and the JSON API both run on the same backend; this SDK wraps the JSON API exposed at `https://get.uptime.is/api`.
-
-What you get from the API:
-
-- Submit a target uptime percentage via `sla` (for example `sla=99.9`) and receive the corresponding allowable downtime for daily, weekly, monthly, quarterly and yearly periods.
-- Submit a downtime budget via `down` (in seconds, or as a formatted string such as `1h20m`) to get the SLA percentage it corresponds to.
-- Submit per-weekday operating hours via `dur` (repeated seven times) to compute downtime against a custom weekly schedule.
-- Responses are JSON, with human-readable durations and convenience URLs back into the uptime.is web view.
-
-Operational notes: only `GET` is supported. No authentication is required and CORS is enabled, so the API can be called directly from a browser. There is no published rate limit, but the operator asks heavy or commercial users to get in touch first.
 
 ## Try it
 
@@ -49,27 +36,31 @@ gem install sla-uptime-calculator-sdk
 luarocks install sla-uptime-calculator-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { SlaUptimeCalculatorSDK } from 'sla-uptime-calculator'
 
-const client = new SlaUptimeCalculatorSDK({})
+const client = new SlaUptimeCalculatorSDK({
+  apikey: process.env.SLA-UPTIME-CALCULATOR_APIKEY,
+})
 
+// Load api data
+const api = await client.Api().load({})
+console.log(api.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -99,7 +90,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Api** | The single calculation resource exposed at `GET https://get.uptime.is/api`, accepting `sla`, `down` or `dur` query parameters and returning JSON downtime/uptime breakdowns. | `/api` |
+| **Api** |  | `/api` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -109,15 +100,17 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from slauptimecalculator_sdk import SlaUptimeCalculatorSDK
 
-client = SlaUptimeCalculatorSDK({})
+client = SlaUptimeCalculatorSDK({
+    "apikey": os.environ.get("SLA-UPTIME-CALCULATOR_APIKEY"),
+})
 
 
 # Load a specific api
-api, err = client.Api(None).load(
-    {"id": "example_id"}, None
-)
+api, err = client.Api().load({"id": "example_id"})
+print(api)
 ```
 
 ### PHP
@@ -126,13 +119,14 @@ api, err = client.Api(None).load(
 <?php
 require_once 'slauptimecalculator_sdk.php';
 
-$client = new SlaUptimeCalculatorSDK([]);
+$client = new SlaUptimeCalculatorSDK([
+    "apikey" => getenv("SLA-UPTIME-CALCULATOR_APIKEY"),
+]);
 
 
 // Load a specific api
-[$api, $err] = $client->Api(null)->load(
-    ["id" => "example_id"], null
-);
+[$api, $err] = $client->Api()->load(["id" => "example_id"]);
+print_r($api);
 ```
 
 ### Golang
@@ -140,8 +134,13 @@ $client = new SlaUptimeCalculatorSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/sla-uptime-calculator-sdk/go"
 
-client := sdk.NewSlaUptimeCalculatorSDK(map[string]any{})
+client := sdk.NewSlaUptimeCalculatorSDK(map[string]any{
+    "apikey": os.Getenv("SLA-UPTIME-CALCULATOR_APIKEY"),
+})
 
+// Load api data
+api, err := client.Api(nil).Load(map[string]any{}, nil)
+fmt.Println(api)
 ```
 
 ### Ruby
@@ -149,13 +148,14 @@ client := sdk.NewSlaUptimeCalculatorSDK(map[string]any{})
 ```ruby
 require_relative "SlaUptimeCalculator_sdk"
 
-client = SlaUptimeCalculatorSDK.new({})
+client = SlaUptimeCalculatorSDK.new({
+  "apikey" => ENV["SLA-UPTIME-CALCULATOR_APIKEY"],
+})
 
 
 # Load a specific api
-api, err = client.Api(nil).load(
-  { "id" => "example_id" }, nil
-)
+api, err = client.Api().load({ "id" => "example_id" })
+puts api
 ```
 
 ### Lua
@@ -163,13 +163,14 @@ api, err = client.Api(nil).load(
 ```lua
 local sdk = require("sla-uptime-calculator_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("SLA-UPTIME-CALCULATOR_APIKEY"),
+})
 
 
 -- Load a specific api
-local api, err = client:Api(nil):load(
-  { id = "example_id" }, nil
-)
+local api, err = client:Api():load({ id = "example_id" })
+print(api)
 ```
 
 ## Unit testing in offline mode
@@ -188,25 +189,21 @@ const result = await client.Api().load({ id: 'test01' })
 ### Python
 
 ```python
-client = SlaUptimeCalculatorSDK.test(None, None)
-result, err = client.Api(None).load(
-    {"id": "test01"}, None
-)
+client = SlaUptimeCalculatorSDK.test()
+result, err = client.Api().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = SlaUptimeCalculatorSDK::test(null, null);
-[$result, $err] = $client->Api(null)->load(
-    ["id" => "test01"], null
-);
+$client = SlaUptimeCalculatorSDK::test();
+[$result, $err] = $client->Api()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Api(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -215,19 +212,15 @@ result, err := client.Api(nil).Load(
 ### Ruby
 
 ```ruby
-client = SlaUptimeCalculatorSDK.test(nil, nil)
-result, err = client.Api(nil).load(
-  { "id" => "test01" }, nil
-)
+client = SlaUptimeCalculatorSDK.test
+result, err = client.Api().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Api(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Api():load({ id = "test01" })
 ```
 
 ## How it works
@@ -331,16 +324,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the SLA Uptime Calculator
-
-- Upstream: [https://uptime.is](https://uptime.is)
-- API docs: [https://uptime.is/about](https://uptime.is/about)
-
-- No explicit licence is published for the API.
-- Ad hoc personal use is described as freely available with CORS enabled.
-- Commercial or heavy usage: the operator asks you to make contact (`uptime-mail@posteo.com`).
-- Attribution to [uptime.is](https://uptime.is) is courteous when redistributing results.
 
 ---
 

@@ -74,12 +74,14 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'SLAUPTIMECALCULATOR_TEST_API_ENTID': {},
     'SLAUPTIMECALCULATOR_TEST_LIVE': 'FALSE',
+    'SLAUPTIMECALCULATOR_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.SLAUPTIMECALCULATOR_TEST_LIVE
 
   if (live) {
     const client = new SlaUptimeCalculatorSDK({
+      apikey: env.SLAUPTIMECALCULATOR_APIKEY,
     })
 
     let idmap: any = env['SLAUPTIMECALCULATOR_TEST_API_ENTID']

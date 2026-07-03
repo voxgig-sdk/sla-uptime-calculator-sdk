@@ -117,6 +117,7 @@ func apiBasicSetup(extra map[string]any) *entityTestSetup {
 		"SLAUPTIMECALCULATOR_TEST_API_ENTID": idmap,
 		"SLAUPTIMECALCULATOR_TEST_LIVE":      "FALSE",
 		"SLAUPTIMECALCULATOR_TEST_EXPLAIN":   "FALSE",
+		"SLAUPTIMECALCULATOR_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["SLAUPTIMECALCULATOR_TEST_API_ENTID"])
@@ -127,6 +128,7 @@ func apiBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["SLAUPTIMECALCULATOR_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
+				"apikey": env["SLAUPTIMECALCULATOR_APIKEY"],
 			},
 			extra,
 		})

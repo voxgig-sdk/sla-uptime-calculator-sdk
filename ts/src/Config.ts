@@ -38,6 +38,10 @@ class Config {
   options = {
     base: 'https://get.uptime.is',
 
+    auth: {
+      prefix: 'Bearer',
+    },
+
     headers: {
       "content-type": "application/json"
     },
@@ -55,115 +59,118 @@ class Config {
     "api": {
       "fields": [
         {
+          "active": true,
           "name": "daily_down",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 0
         },
         {
+          "active": true,
           "name": "daily_down_sec",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 1
         },
         {
+          "active": true,
           "name": "monthly_down",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 2
         },
         {
+          "active": true,
           "name": "monthly_down_sec",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 3
         },
         {
+          "active": true,
           "name": "nine",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 4
         },
         {
+          "active": true,
           "name": "quarterly_down",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 5
         },
         {
+          "active": true,
           "name": "quarterly_down_sec",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 6
         },
         {
+          "active": true,
           "name": "sla",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 7
         },
         {
+          "active": true,
           "name": "uptime_url",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 8
         },
         {
+          "active": true,
           "name": "weekly_down",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 9
         },
         {
+          "active": true,
           "name": "weekly_down_sec",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 10
         },
         {
+          "active": true,
           "name": "yearly_down",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 11
         },
         {
+          "active": true,
           "name": "yearly_down_sec",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 12
         }
       ],
       "name": "api",
       "op": {
         "load": {
+          "input": "data",
           "name": "load",
           "points": [
             {
+              "active": true,
               "args": {
                 "query": [
                   {
+                    "active": true,
                     "example": "1h20m",
                     "kind": "query",
                     "name": "down",
                     "orig": "down",
                     "reqd": false,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   },
                   {
+                    "active": true,
                     "example": [
                       8,
                       8,
@@ -177,17 +184,16 @@ class Config {
                     "name": "dur",
                     "orig": "dur",
                     "reqd": false,
-                    "type": "`$ARRAY`",
-                    "active": true
+                    "type": "`$ARRAY`"
                   },
                   {
+                    "active": true,
                     "example": 99.9,
                     "kind": "query",
                     "name": "sla",
                     "orig": "sla",
                     "reqd": false,
-                    "type": "`$NUMBER`",
-                    "active": true
+                    "type": "`$NUMBER`"
                   }
                 ]
               },
@@ -207,11 +213,9 @@ class Config {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
               "index$": 0
             }
           ],
-          "input": "data",
           "key$": "load"
         }
       },

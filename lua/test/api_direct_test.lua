@@ -62,12 +62,14 @@ function api_direct_setup(mockres)
   local env = runner.env_override({
     ["SLAUPTIMECALCULATOR_TEST_API_ENTID"] = {},
     ["SLAUPTIMECALCULATOR_TEST_LIVE"] = "FALSE",
+    ["SLAUPTIMECALCULATOR_APIKEY"] = "NONE",
   })
 
   local live = env["SLAUPTIMECALCULATOR_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
+      apikey = env["SLAUPTIMECALCULATOR_APIKEY"],
     }
     local client = sdk.new(merged_opts)
     return {

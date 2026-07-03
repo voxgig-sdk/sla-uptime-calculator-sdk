@@ -91,6 +91,7 @@ def _api_basic_setup(extra):
         "SLAUPTIMECALCULATOR_TEST_API_ENTID": idmap,
         "SLAUPTIMECALCULATOR_TEST_LIVE": "FALSE",
         "SLAUPTIMECALCULATOR_TEST_EXPLAIN": "FALSE",
+        "SLAUPTIMECALCULATOR_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -101,6 +102,7 @@ def _api_basic_setup(extra):
     if env.get("SLAUPTIMECALCULATOR_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
+                "apikey": env.get("SLAUPTIMECALCULATOR_APIKEY"),
             },
             extra or {},
         ])

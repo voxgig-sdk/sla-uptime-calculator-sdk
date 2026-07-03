@@ -99,12 +99,14 @@ func apiDirectSetup(mockres any) *apiDirectSetupResult {
 	env := envOverride(map[string]any{
 		"SLAUPTIMECALCULATOR_TEST_API_ENTID": map[string]any{},
 		"SLAUPTIMECALCULATOR_TEST_LIVE":    "FALSE",
+		"SLAUPTIMECALCULATOR_APIKEY":       "NONE",
 	})
 
 	live := env["SLAUPTIMECALCULATOR_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
+			"apikey": env["SLAUPTIMECALCULATOR_APIKEY"],
 		}
 		client := sdk.NewSlaUptimeCalculatorSDK(mergedOpts)
 

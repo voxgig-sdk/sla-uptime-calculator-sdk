@@ -59,12 +59,14 @@ def _api_direct_setup(mockres):
     env = runner.env_override({
         "SLAUPTIMECALCULATOR_TEST_API_ENTID": {},
         "SLAUPTIMECALCULATOR_TEST_LIVE": "FALSE",
+        "SLAUPTIMECALCULATOR_APIKEY": "NONE",
     })
 
     live = env.get("SLAUPTIMECALCULATOR_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
+            "apikey": env.get("SLAUPTIMECALCULATOR_APIKEY"),
         }
         client = SlaUptimeCalculatorSDK(merged_opts)
         return {
