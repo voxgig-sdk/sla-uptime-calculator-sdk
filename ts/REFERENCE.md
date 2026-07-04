@@ -109,7 +109,7 @@ Alias for `SlaUptimeCalculatorSDK.test()`.
 ## ApiEntity
 
 ```ts
-const api = client.api
+const api = client.Api()
 ```
 
 ### Fields
@@ -137,7 +137,7 @@ const api = client.api
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.api.load({ id: 'api_id' })
+const result = await client.Api().load({ id: 'api_id' })
 ```
 
 ### Common Methods

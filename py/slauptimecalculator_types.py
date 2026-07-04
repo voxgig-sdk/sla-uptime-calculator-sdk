@@ -4,43 +4,45 @@
 # params (op.<name>.points[].args.params[]). Field/param types come from the
 # canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 # @voxgig/apidef VALID_CANON). Do not edit by hand.
+#
+# These are TypedDicts, not dataclasses: the SDK ops return/accept plain dicts
+# at runtime, and a TypedDict IS a dict shape, so the types match the runtime.
+# Optional (req:false) keys are modelled as TypedDict key-optionality
+# (total=False), split into a required base + total=False subclass when a type
+# has both required and optional keys.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Optional, Any
+from typing import TypedDict, Any
 
 
-@dataclass
-class Api:
-    daily_down: Optional[str] = None
-    daily_down_sec: Optional[float] = None
-    monthly_down: Optional[str] = None
-    monthly_down_sec: Optional[float] = None
-    nine: Optional[str] = None
-    quarterly_down: Optional[str] = None
-    quarterly_down_sec: Optional[float] = None
-    sla: Optional[float] = None
-    uptime_url: Optional[str] = None
-    weekly_down: Optional[str] = None
-    weekly_down_sec: Optional[float] = None
-    yearly_down: Optional[str] = None
-    yearly_down_sec: Optional[float] = None
+class Api(TypedDict, total=False):
+    daily_down: str
+    daily_down_sec: float
+    monthly_down: str
+    monthly_down_sec: float
+    nine: str
+    quarterly_down: str
+    quarterly_down_sec: float
+    sla: float
+    uptime_url: str
+    weekly_down: str
+    weekly_down_sec: float
+    yearly_down: str
+    yearly_down_sec: float
 
 
-@dataclass
-class ApiLoadMatch:
-    daily_down: Optional[str] = None
-    daily_down_sec: Optional[float] = None
-    monthly_down: Optional[str] = None
-    monthly_down_sec: Optional[float] = None
-    nine: Optional[str] = None
-    quarterly_down: Optional[str] = None
-    quarterly_down_sec: Optional[float] = None
-    sla: Optional[float] = None
-    uptime_url: Optional[str] = None
-    weekly_down: Optional[str] = None
-    weekly_down_sec: Optional[float] = None
-    yearly_down: Optional[str] = None
-    yearly_down_sec: Optional[float] = None
-
+class ApiLoadMatch(TypedDict, total=False):
+    daily_down: str
+    daily_down_sec: float
+    monthly_down: str
+    monthly_down_sec: float
+    nine: str
+    quarterly_down: str
+    quarterly_down_sec: float
+    sla: float
+    uptime_url: str
+    weekly_down: str
+    weekly_down_sec: float
+    yearly_down: str
+    yearly_down_sec: float
