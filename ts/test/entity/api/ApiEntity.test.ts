@@ -113,7 +113,6 @@ function basicSetup(extra?: any) {
     'SLA_UPTIME_CALCULATOR_TEST_API_ENTID': idmap,
     'SLA_UPTIME_CALCULATOR_TEST_LIVE': 'FALSE',
     'SLA_UPTIME_CALCULATOR_TEST_EXPLAIN': 'FALSE',
-    'SLA_UPTIME_CALCULATOR_APIKEY': 'NONE',
   })
 
   idmap = env['SLA_UPTIME_CALCULATOR_TEST_API_ENTID']
@@ -123,7 +122,6 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new SlaUptimeCalculatorSDK(merge([
       {
-        apikey: env.SLA_UPTIME_CALCULATOR_APIKEY,
       },
       extra
     ]))

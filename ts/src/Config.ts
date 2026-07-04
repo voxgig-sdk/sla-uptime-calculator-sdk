@@ -38,10 +38,6 @@ class Config {
   options = {
     base: 'https://get.uptime.is',
 
-    auth: {
-      prefix: 'Bearer',
-    },
-
     headers: {
       "content-type": "application/json"
     },

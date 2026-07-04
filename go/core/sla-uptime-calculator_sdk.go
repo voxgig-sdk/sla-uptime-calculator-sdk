@@ -245,6 +245,9 @@ func (sdk *SlaUptimeCalculatorSDK) Direct(fetchargs map[string]any) (map[string]
 }
 
 
+// Api returns a Api entity bound to this client.
+// Idiomatic usage: client.Api(nil).List(nil, nil) or
+// client.Api(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *SlaUptimeCalculatorSDK) Api(data map[string]any) SlaUptimeCalculatorEntity {
 	return NewApiEntityFunc(sdk, data)
 }

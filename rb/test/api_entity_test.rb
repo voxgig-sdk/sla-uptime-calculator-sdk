@@ -42,8 +42,7 @@ class ApiEntityTest < Minitest::Test
     # LOAD
     api_ref01_ent = client.Api(nil)
     api_ref01_match_dt0 = {}
-    api_ref01_data_dt0_loaded, err = api_ref01_ent.load(api_ref01_match_dt0, nil)
-    assert_nil err
+    api_ref01_data_dt0_loaded = api_ref01_ent.load(api_ref01_match_dt0, nil)
     assert !api_ref01_data_dt0_loaded.nil?
 
   end
@@ -82,7 +81,6 @@ def api_basic_setup(extra)
     "SLAUPTIMECALCULATOR_TEST_API_ENTID" => idmap,
     "SLAUPTIMECALCULATOR_TEST_LIVE" => "FALSE",
     "SLAUPTIMECALCULATOR_TEST_EXPLAIN" => "FALSE",
-    "SLAUPTIMECALCULATOR_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -94,7 +92,6 @@ def api_basic_setup(extra)
   if env["SLAUPTIMECALCULATOR_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["SLAUPTIMECALCULATOR_APIKEY"],
       },
       extra || {},
     ])
