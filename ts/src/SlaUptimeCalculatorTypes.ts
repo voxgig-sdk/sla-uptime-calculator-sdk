@@ -21,5 +21,19 @@ export interface Api {
   yearly_down_sec?: number
 }
 
-export type ApiLoadMatch = Partial<Api>
+export interface ApiLoadMatch {
+  daily_down?: string
+  daily_down_sec?: number
+  monthly_down?: string
+  monthly_down_sec?: number
+  nine?: string
+  quarterly_down?: string
+  quarterly_down_sec?: number
+  sla?: number
+  uptime_url?: string
+  weekly_down?: string
+  weekly_down_sec?: number
+  yearly_down?: string
+  yearly_down_sec?: number
+}
 

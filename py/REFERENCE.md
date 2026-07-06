@@ -8,7 +8,7 @@ Complete API reference for the SlaUptimeCalculator Python SDK.
 ### Constructor
 
 ```python
-from sla-uptime-calculator_sdk import SlaUptimeCalculatorSDK
+from slauptimecalculator_sdk import SlaUptimeCalculatorSDK
 
 client = SlaUptimeCalculatorSDK(options)
 ```
@@ -87,19 +87,19 @@ api = client.Api()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | ``$STRING`` | No |  |
-| `daily_down_sec` | ``$NUMBER`` | No |  |
-| `monthly_down` | ``$STRING`` | No |  |
-| `monthly_down_sec` | ``$NUMBER`` | No |  |
-| `nine` | ``$STRING`` | No |  |
-| `quarterly_down` | ``$STRING`` | No |  |
-| `quarterly_down_sec` | ``$NUMBER`` | No |  |
-| `sla` | ``$NUMBER`` | No |  |
-| `uptime_url` | ``$STRING`` | No |  |
-| `weekly_down` | ``$STRING`` | No |  |
-| `weekly_down_sec` | ``$NUMBER`` | No |  |
-| `yearly_down` | ``$STRING`` | No |  |
-| `yearly_down_sec` | ``$NUMBER`` | No |  |
+| `daily_down` | `str` | No |  |
+| `daily_down_sec` | `float` | No |  |
+| `monthly_down` | `str` | No |  |
+| `monthly_down_sec` | `float` | No |  |
+| `nine` | `str` | No |  |
+| `quarterly_down` | `str` | No |  |
+| `quarterly_down_sec` | `float` | No |  |
+| `sla` | `float` | No |  |
+| `uptime_url` | `str` | No |  |
+| `weekly_down` | `str` | No |  |
+| `weekly_down_sec` | `float` | No |  |
+| `yearly_down` | `str` | No |  |
+| `yearly_down_sec` | `float` | No |  |
 
 ### Operations
 
@@ -108,7 +108,7 @@ api = client.Api()
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Api().load({"id": "api_id"})
+result = client.Api().load()
 ```
 
 ### Common Methods

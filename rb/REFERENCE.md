@@ -8,7 +8,7 @@ Complete API reference for the SlaUptimeCalculator Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'sla-uptime-calculator_sdk'
+require_relative 'SlaUptimeCalculator_sdk'
 
 client = SlaUptimeCalculatorSDK.new(options)
 ```
@@ -93,19 +93,19 @@ api = client.Api
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | ``$STRING`` | No |  |
-| `daily_down_sec` | ``$NUMBER`` | No |  |
-| `monthly_down` | ``$STRING`` | No |  |
-| `monthly_down_sec` | ``$NUMBER`` | No |  |
-| `nine` | ``$STRING`` | No |  |
-| `quarterly_down` | ``$STRING`` | No |  |
-| `quarterly_down_sec` | ``$NUMBER`` | No |  |
-| `sla` | ``$NUMBER`` | No |  |
-| `uptime_url` | ``$STRING`` | No |  |
-| `weekly_down` | ``$STRING`` | No |  |
-| `weekly_down_sec` | ``$NUMBER`` | No |  |
-| `yearly_down` | ``$STRING`` | No |  |
-| `yearly_down_sec` | ``$NUMBER`` | No |  |
+| `daily_down` | `String` | No |  |
+| `daily_down_sec` | `Float` | No |  |
+| `monthly_down` | `String` | No |  |
+| `monthly_down_sec` | `Float` | No |  |
+| `nine` | `String` | No |  |
+| `quarterly_down` | `String` | No |  |
+| `quarterly_down_sec` | `Float` | No |  |
+| `sla` | `Float` | No |  |
+| `uptime_url` | `String` | No |  |
+| `weekly_down` | `String` | No |  |
+| `weekly_down_sec` | `Float` | No |  |
+| `yearly_down` | `String` | No |  |
+| `yearly_down_sec` | `Float` | No |  |
 
 ### Operations
 
@@ -114,7 +114,7 @@ api = client.Api
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Api.load({ "id" => "api_id" })
+result = client.Api.load()
 ```
 
 ### Common Methods

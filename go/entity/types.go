@@ -25,8 +25,7 @@ type Api struct {
 	YearlyDownSec *float64 `json:"yearly_down_sec,omitempty"`
 }
 
-// ApiLoadMatch mirrors the api fields as an all-optional match
-// filter (Go analog of Partial<Api>).
+// ApiLoadMatch is the typed request payload for Api.LoadTyped.
 type ApiLoadMatch struct {
 	DailyDown *string `json:"daily_down,omitempty"`
 	DailyDownSec *float64 `json:"daily_down_sec,omitempty"`

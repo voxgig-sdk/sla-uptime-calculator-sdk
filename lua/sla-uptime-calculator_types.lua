@@ -22,6 +22,19 @@
 ---@field yearly_down_sec? number
 
 ---@class ApiLoadMatch
+---@field daily_down? string
+---@field daily_down_sec? number
+---@field monthly_down? string
+---@field monthly_down_sec? number
+---@field nine? string
+---@field quarterly_down? string
+---@field quarterly_down_sec? number
+---@field sla? number
+---@field uptime_url? string
+---@field weekly_down? string
+---@field weekly_down_sec? number
+---@field yearly_down? string
+---@field yearly_down_sec? number
 
 local M = {}
 

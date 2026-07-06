@@ -8,7 +8,7 @@ Complete API reference for the SlaUptimeCalculator PHP SDK.
 ### Constructor
 
 ```php
-require_once __DIR__ . '/sla-uptime-calculator_sdk.php';
+require_once __DIR__ . '/slauptimecalculator_sdk.php';
 
 $client = new SlaUptimeCalculatorSDK($options);
 ```
@@ -45,11 +45,11 @@ $client = SlaUptimeCalculatorSDK::test();
 
 Create a new `ApiEntity` instance. Pass `null` for no initial data.
 
-#### `optionsMap(): array`
+#### `options_map(): array`
 
 Return a deep copy of the current SDK options.
 
-#### `getUtility(): ProjectNameUtility`
+#### `get_utility(): SlaUptimeCalculatorUtility`
 
 Return a copy of the SDK utility object.
 
@@ -92,19 +92,19 @@ $api = $client->Api();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | ``$STRING`` | No |  |
-| `daily_down_sec` | ``$NUMBER`` | No |  |
-| `monthly_down` | ``$STRING`` | No |  |
-| `monthly_down_sec` | ``$NUMBER`` | No |  |
-| `nine` | ``$STRING`` | No |  |
-| `quarterly_down` | ``$STRING`` | No |  |
-| `quarterly_down_sec` | ``$NUMBER`` | No |  |
-| `sla` | ``$NUMBER`` | No |  |
-| `uptime_url` | ``$STRING`` | No |  |
-| `weekly_down` | ``$STRING`` | No |  |
-| `weekly_down_sec` | ``$NUMBER`` | No |  |
-| `yearly_down` | ``$STRING`` | No |  |
-| `yearly_down_sec` | ``$NUMBER`` | No |  |
+| `daily_down` | `string` | No |  |
+| `daily_down_sec` | `float` | No |  |
+| `monthly_down` | `string` | No |  |
+| `monthly_down_sec` | `float` | No |  |
+| `nine` | `string` | No |  |
+| `quarterly_down` | `string` | No |  |
+| `quarterly_down_sec` | `float` | No |  |
+| `sla` | `float` | No |  |
+| `uptime_url` | `string` | No |  |
+| `weekly_down` | `string` | No |  |
+| `weekly_down_sec` | `float` | No |  |
+| `yearly_down` | `string` | No |  |
+| `yearly_down_sec` | `float` | No |  |
 
 ### Operations
 
@@ -113,24 +113,24 @@ $api = $client->Api();
 Load a single entity matching the given criteria. Throws on error.
 
 ```php
-$result = $client->Api()->load(["id" => "api_id"]);
+$result = $client->Api()->load();
 ```
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -139,7 +139,7 @@ Set the entity match criteria.
 Create a new `ApiEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 

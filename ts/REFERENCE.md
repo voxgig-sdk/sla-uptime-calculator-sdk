@@ -116,19 +116,19 @@ const api = client.Api()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | ``$STRING`` | No |  |
-| `daily_down_sec` | ``$NUMBER`` | No |  |
-| `monthly_down` | ``$STRING`` | No |  |
-| `monthly_down_sec` | ``$NUMBER`` | No |  |
-| `nine` | ``$STRING`` | No |  |
-| `quarterly_down` | ``$STRING`` | No |  |
-| `quarterly_down_sec` | ``$NUMBER`` | No |  |
-| `sla` | ``$NUMBER`` | No |  |
-| `uptime_url` | ``$STRING`` | No |  |
-| `weekly_down` | ``$STRING`` | No |  |
-| `weekly_down_sec` | ``$NUMBER`` | No |  |
-| `yearly_down` | ``$STRING`` | No |  |
-| `yearly_down_sec` | ``$NUMBER`` | No |  |
+| `daily_down` | `string` | No |  |
+| `daily_down_sec` | `number` | No |  |
+| `monthly_down` | `string` | No |  |
+| `monthly_down_sec` | `number` | No |  |
+| `nine` | `string` | No |  |
+| `quarterly_down` | `string` | No |  |
+| `quarterly_down_sec` | `number` | No |  |
+| `sla` | `number` | No |  |
+| `uptime_url` | `string` | No |  |
+| `weekly_down` | `string` | No |  |
+| `weekly_down_sec` | `number` | No |  |
+| `yearly_down` | `string` | No |  |
+| `yearly_down_sec` | `number` | No |  |
 
 ### Operations
 
@@ -137,7 +137,7 @@ const api = client.Api()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Api().load({ id: 'api_id' })
+const result = await client.Api().load()
 ```
 
 ### Common Methods

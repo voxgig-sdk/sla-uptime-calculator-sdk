@@ -97,19 +97,19 @@ api := client.Api(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | ``$STRING`` | No |  |
-| `daily_down_sec` | ``$NUMBER`` | No |  |
-| `monthly_down` | ``$STRING`` | No |  |
-| `monthly_down_sec` | ``$NUMBER`` | No |  |
-| `nine` | ``$STRING`` | No |  |
-| `quarterly_down` | ``$STRING`` | No |  |
-| `quarterly_down_sec` | ``$NUMBER`` | No |  |
-| `sla` | ``$NUMBER`` | No |  |
-| `uptime_url` | ``$STRING`` | No |  |
-| `weekly_down` | ``$STRING`` | No |  |
-| `weekly_down_sec` | ``$NUMBER`` | No |  |
-| `yearly_down` | ``$STRING`` | No |  |
-| `yearly_down_sec` | ``$NUMBER`` | No |  |
+| `daily_down` | `string` | No |  |
+| `daily_down_sec` | `float64` | No |  |
+| `monthly_down` | `string` | No |  |
+| `monthly_down_sec` | `float64` | No |  |
+| `nine` | `string` | No |  |
+| `quarterly_down` | `string` | No |  |
+| `quarterly_down_sec` | `float64` | No |  |
+| `sla` | `float64` | No |  |
+| `uptime_url` | `string` | No |  |
+| `weekly_down` | `string` | No |  |
+| `weekly_down_sec` | `float64` | No |  |
+| `yearly_down` | `string` | No |  |
+| `yearly_down_sec` | `float64` | No |  |
 
 ### Operations
 
@@ -118,7 +118,7 @@ api := client.Api(nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Api(nil).Load(map[string]any{"id": "api_id"}, nil)
+result, err := client.Api(nil).Load(nil, nil)
 ```
 
 ### Common Methods

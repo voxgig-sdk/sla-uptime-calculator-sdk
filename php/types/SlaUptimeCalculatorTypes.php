@@ -30,7 +30,7 @@ class Api
     public ?float $yearly_down_sec = null;
 }
 
-/** Match filter for Api#load (any subset of Api fields). */
+/** Request payload for Api#load. */
 class ApiLoadMatch
 {
     public ?string $daily_down = null;
