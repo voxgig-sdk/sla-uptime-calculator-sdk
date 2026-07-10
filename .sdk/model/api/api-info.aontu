@@ -15,9 +15,9 @@ main: {
           url: "https://get.uptime.is"
         }
       ]
+      summary: "The SLA Uptime Calculator API provides calculations for expected downtime based on specified uptime percentages."
       title: "SLA Uptime Calculator"
       version: "1.0.0"
+      website: "https://get.uptime.is"
     }
   }
-}
-
