@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- SlaUptimeCalculator SDK exists test
 
 local sdk = require("sla-uptime-calculator_sdk")
 
