@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ SlaUptimeCalculatorUtility.registrar = ->(u) {
   u.prepare_params = SlaUptimeCalculatorUtilities::PrepareParams
   u.prepare_path = SlaUptimeCalculatorUtilities::PreparePath
   u.prepare_query = SlaUptimeCalculatorUtilities::PrepareQuery
+  u.graphql_body = SlaUptimeCalculatorUtilities::GraphqlBody
+  u.graphql_errors = SlaUptimeCalculatorUtilities::GraphqlErrors
   u.result_basic = SlaUptimeCalculatorUtilities::ResultBasic
   u.result_body = SlaUptimeCalculatorUtilities::ResultBody
   u.result_headers = SlaUptimeCalculatorUtilities::ResultHeaders

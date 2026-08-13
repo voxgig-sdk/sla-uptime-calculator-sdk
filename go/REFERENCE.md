@@ -98,19 +98,19 @@ fmt.Println(api.GetName()) // "api"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | `string` | No |  |
-| `daily_down_sec` | `float64` | No |  |
-| `monthly_down` | `string` | No |  |
-| `monthly_down_sec` | `float64` | No |  |
-| `nine` | `string` | No |  |
-| `quarterly_down` | `string` | No |  |
-| `quarterly_down_sec` | `float64` | No |  |
-| `sla` | `float64` | No |  |
-| `uptime_url` | `string` | No |  |
-| `weekly_down` | `string` | No |  |
-| `weekly_down_sec` | `float64` | No |  |
-| `yearly_down` | `string` | No |  |
-| `yearly_down_sec` | `float64` | No |  |
+| `SLA` | `float64` | No |  |
+| `dailyDown` | `string` | No |  |
+| `dailyDownSecs` | `float64` | No |  |
+| `monthlyDown` | `string` | No |  |
+| `monthlyDownSecs` | `float64` | No |  |
+| `nines` | `string` | No |  |
+| `quarterlyDown` | `string` | No |  |
+| `quarterlyDownSecs` | `float64` | No |  |
+| `uptimeURL` | `string` | No |  |
+| `weeklyDown` | `string` | No |  |
+| `weeklyDownSecs` | `float64` | No |  |
+| `yearlyDown` | `string` | No |  |
+| `yearlyDownSecs` | `float64` | No |  |
 
 ### Operations
 

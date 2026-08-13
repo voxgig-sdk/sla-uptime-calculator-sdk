@@ -10,115 +10,115 @@
 
 # Api entity data model.
 #
-# @!attribute [rw] daily_down
-#   @return [String, nil]
-#
-# @!attribute [rw] daily_down_sec
+# @!attribute [rw] SLA
 #   @return [Float, nil]
 #
-# @!attribute [rw] monthly_down
+# @!attribute [rw] dailyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] monthly_down_sec
+# @!attribute [rw] dailyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] nine
+# @!attribute [rw] monthlyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] quarterly_down
-#   @return [String, nil]
-#
-# @!attribute [rw] quarterly_down_sec
+# @!attribute [rw] monthlyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] sla
+# @!attribute [rw] nines
+#   @return [String, nil]
+#
+# @!attribute [rw] quarterlyDown
+#   @return [String, nil]
+#
+# @!attribute [rw] quarterlyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] uptime_url
+# @!attribute [rw] uptimeURL
 #   @return [String, nil]
 #
-# @!attribute [rw] weekly_down
+# @!attribute [rw] weeklyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] weekly_down_sec
+# @!attribute [rw] weeklyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] yearly_down
+# @!attribute [rw] yearlyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] yearly_down_sec
+# @!attribute [rw] yearlyDownSecs
 #   @return [Float, nil]
 Api = Struct.new(
-  :daily_down,
-  :daily_down_sec,
-  :monthly_down,
-  :monthly_down_sec,
-  :nine,
-  :quarterly_down,
-  :quarterly_down_sec,
-  :sla,
-  :uptime_url,
-  :weekly_down,
-  :weekly_down_sec,
-  :yearly_down,
-  :yearly_down_sec,
+  :SLA,
+  :dailyDown,
+  :dailyDownSecs,
+  :monthlyDown,
+  :monthlyDownSecs,
+  :nines,
+  :quarterlyDown,
+  :quarterlyDownSecs,
+  :uptimeURL,
+  :weeklyDown,
+  :weeklyDownSecs,
+  :yearlyDown,
+  :yearlyDownSecs,
   keyword_init: true
 )
 
 # Request payload for Api#load.
 #
-# @!attribute [rw] daily_down
-#   @return [String, nil]
-#
-# @!attribute [rw] daily_down_sec
+# @!attribute [rw] SLA
 #   @return [Float, nil]
 #
-# @!attribute [rw] monthly_down
+# @!attribute [rw] dailyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] monthly_down_sec
+# @!attribute [rw] dailyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] nine
+# @!attribute [rw] monthlyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] quarterly_down
-#   @return [String, nil]
-#
-# @!attribute [rw] quarterly_down_sec
+# @!attribute [rw] monthlyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] sla
+# @!attribute [rw] nines
+#   @return [String, nil]
+#
+# @!attribute [rw] quarterlyDown
+#   @return [String, nil]
+#
+# @!attribute [rw] quarterlyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] uptime_url
+# @!attribute [rw] uptimeURL
 #   @return [String, nil]
 #
-# @!attribute [rw] weekly_down
+# @!attribute [rw] weeklyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] weekly_down_sec
+# @!attribute [rw] weeklyDownSecs
 #   @return [Float, nil]
 #
-# @!attribute [rw] yearly_down
+# @!attribute [rw] yearlyDown
 #   @return [String, nil]
 #
-# @!attribute [rw] yearly_down_sec
+# @!attribute [rw] yearlyDownSecs
 #   @return [Float, nil]
 ApiLoadMatch = Struct.new(
-  :daily_down,
-  :daily_down_sec,
-  :monthly_down,
-  :monthly_down_sec,
-  :nine,
-  :quarterly_down,
-  :quarterly_down_sec,
-  :sla,
-  :uptime_url,
-  :weekly_down,
-  :weekly_down_sec,
-  :yearly_down,
-  :yearly_down_sec,
+  :SLA,
+  :dailyDown,
+  :dailyDownSecs,
+  :monthlyDown,
+  :monthlyDownSecs,
+  :nines,
+  :quarterlyDown,
+  :quarterlyDownSecs,
+  :uptimeURL,
+  :weeklyDown,
+  :weeklyDownSecs,
+  :yearlyDown,
+  :yearlyDownSecs,
   keyword_init: true
 )
 

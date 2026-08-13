@@ -92,19 +92,19 @@ $api = $client->Api();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | `string` | No |  |
-| `daily_down_sec` | `float` | No |  |
-| `monthly_down` | `string` | No |  |
-| `monthly_down_sec` | `float` | No |  |
-| `nine` | `string` | No |  |
-| `quarterly_down` | `string` | No |  |
-| `quarterly_down_sec` | `float` | No |  |
-| `sla` | `float` | No |  |
-| `uptime_url` | `string` | No |  |
-| `weekly_down` | `string` | No |  |
-| `weekly_down_sec` | `float` | No |  |
-| `yearly_down` | `string` | No |  |
-| `yearly_down_sec` | `float` | No |  |
+| `SLA` | `float` | No |  |
+| `dailyDown` | `string` | No |  |
+| `dailyDownSecs` | `float` | No |  |
+| `monthlyDown` | `string` | No |  |
+| `monthlyDownSecs` | `float` | No |  |
+| `nines` | `string` | No |  |
+| `quarterlyDown` | `string` | No |  |
+| `quarterlyDownSecs` | `float` | No |  |
+| `uptimeURL` | `string` | No |  |
+| `weeklyDown` | `string` | No |  |
+| `weeklyDownSecs` | `float` | No |  |
+| `yearlyDown` | `string` | No |  |
+| `yearlyDownSecs` | `float` | No |  |
 
 ### Operations
 

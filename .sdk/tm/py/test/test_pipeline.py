@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import SlaUptimeCalculatorSDK
-from core.error import SlaUptimeCalculatorError
-from core.result import SlaUptimeCalculatorResult
-from core.response import SlaUptimeCalculatorResponse
-from core.spec import SlaUptimeCalculatorSpec
-from feature.base_feature import SlaUptimeCalculatorBaseFeature
+from projectname_sdk.core.error import SlaUptimeCalculatorError
+from projectname_sdk.core.result import SlaUptimeCalculatorResult
+from projectname_sdk.core.response import SlaUptimeCalculatorResponse
+from projectname_sdk.core.spec import SlaUptimeCalculatorSpec
+from projectname_sdk.feature.base_feature import SlaUptimeCalculatorBaseFeature
 
 
 def _client():

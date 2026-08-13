@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = SlaUptimeCalculatorSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = SlaUptimeCalculatorSDK.test({
+  entity: {
+    api: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const api = await client.Api().load()
-// api is a bare Api populated with mock data
+// api is the Api entity, populated with mock data
+// — call api.data() for the record itself
 console.log(api)
 ```
 
@@ -182,7 +191,7 @@ require_once 'slauptimecalculator_sdk.php';
 $client = new SlaUptimeCalculatorSDK();
 
 
-// Load a specific api (returns the bare record; throws on error)
+// Load a specific api (returns the ENTITY; call data_get() for the record; throws on error)
 $api = $client->Api()->load();
 print_r($api);
 ```
@@ -210,7 +219,7 @@ require_relative "SlaUptimeCalculator_sdk"
 client = SlaUptimeCalculatorSDK.new
 
 
-# Load a specific api (returns the bare record; raises on error)
+# Load a specific api (returns the ENTITY; call data_get for the record)
 api = client.Api.load()
 puts api
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://uptime.is/about#api](https://uptime.is/about#api)
 

@@ -62,8 +62,8 @@ function makeCtrl(explain: boolean) {
 // Overrides configuration values with environment variables if available
 function envOverride(m: Record<string, any>) {
   if (
-    'TRUE' === process.env.SLAUPTIMECALCULATOR_TEST_LIVE ||
-    'TRUE' === process.env.SLAUPTIMECALCULATOR_TEST_OVERRIDE
+    'TRUE' === process.env.SLA_UPTIME_CALCULATOR_TEST_LIVE ||
+    'TRUE' === process.env.SLA_UPTIME_CALCULATOR_TEST_OVERRIDE
   ) {
     Object.entries(m).map(n => {
       let envval = process.env[n[0]]
@@ -74,7 +74,7 @@ function envOverride(m: Record<string, any>) {
     })
   }
 
-  m.SLAUPTIMECALCULATOR_TEST_EXPLAIN = process.env.SLAUPTIMECALCULATOR_TEST_EXPLAIN || m.SLAUPTIMECALCULATOR_TEST_EXPLAIN
+  m.SLA_UPTIME_CALCULATOR_TEST_EXPLAIN = process.env.SLA_UPTIME_CALCULATOR_TEST_EXPLAIN || m.SLA_UPTIME_CALCULATOR_TEST_EXPLAIN
 
   return m
 }

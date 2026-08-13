@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# SlaUptimeCalculator SDK exists test
 
 import pytest
 from slauptimecalculator_sdk import SlaUptimeCalculatorSDK

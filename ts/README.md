@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = SlaUptimeCalculatorSDK.test()
 
 const api = await client.Api().load()
-// api is a bare entity populated with mock response data
+// api is the entity, populated with mock response data
+// — call api.data() for the record itself
 console.log(api)
 ```
 
@@ -284,19 +285,19 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `daily_down` |  |
-| `daily_down_sec` |  |
-| `monthly_down` |  |
-| `monthly_down_sec` |  |
-| `nine` |  |
-| `quarterly_down` |  |
-| `quarterly_down_sec` |  |
-| `sla` |  |
-| `uptime_url` |  |
-| `weekly_down` |  |
-| `weekly_down_sec` |  |
-| `yearly_down` |  |
-| `yearly_down_sec` |  |
+| `SLA` |  |
+| `dailyDown` |  |
+| `dailyDownSecs` |  |
+| `monthlyDown` |  |
+| `monthlyDownSecs` |  |
+| `nines` |  |
+| `quarterlyDown` |  |
+| `quarterlyDownSecs` |  |
+| `uptimeURL` |  |
+| `weeklyDown` |  |
+| `weeklyDownSecs` |  |
+| `yearlyDown` |  |
+| `yearlyDownSecs` |  |
 
 Operations: load.
 
@@ -321,19 +322,19 @@ Create an instance: `const api = client.Api()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `daily_down` | `string` |  |
-| `daily_down_sec` | `number` |  |
-| `monthly_down` | `string` |  |
-| `monthly_down_sec` | `number` |  |
-| `nine` | `string` |  |
-| `quarterly_down` | `string` |  |
-| `quarterly_down_sec` | `number` |  |
-| `sla` | `number` |  |
-| `uptime_url` | `string` |  |
-| `weekly_down` | `string` |  |
-| `weekly_down_sec` | `number` |  |
-| `yearly_down` | `string` |  |
-| `yearly_down_sec` | `number` |  |
+| `SLA` | `number` |  |
+| `dailyDown` | `string` |  |
+| `dailyDownSecs` | `number` |  |
+| `monthlyDown` | `string` |  |
+| `monthlyDownSecs` | `number` |  |
+| `nines` | `string` |  |
+| `quarterlyDown` | `string` |  |
+| `quarterlyDownSecs` | `number` |  |
+| `uptimeURL` | `string` |  |
+| `weeklyDown` | `string` |  |
+| `weeklyDownSecs` | `number` |  |
+| `yearlyDown` | `string` |  |
+| `yearlyDownSecs` | `number` |  |
 
 #### Example: Load
 

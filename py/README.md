@@ -38,7 +38,7 @@ client = SlaUptimeCalculatorSDK()
 
 ### 3. Load an api
 
-`load()` returns the bare record (a `dict`) and raises on error.
+`load()` returns the ENTITY — call data_get() for the record — and raises on error.
 
 ```python
 try:
@@ -122,7 +122,8 @@ Create a mock client for unit testing — no server required:
 ```python
 client = SlaUptimeCalculatorSDK.test()
 
-# Entity ops return the bare record and raise on error.
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
 api = client.Api().load()
 # api contains the mock response record
 ```
@@ -218,7 +219,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -240,19 +241,19 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `daily_down` |  |
-| `daily_down_sec` |  |
-| `monthly_down` |  |
-| `monthly_down_sec` |  |
-| `nine` |  |
-| `quarterly_down` |  |
-| `quarterly_down_sec` |  |
-| `sla` |  |
-| `uptime_url` |  |
-| `weekly_down` |  |
-| `weekly_down_sec` |  |
-| `yearly_down` |  |
-| `yearly_down_sec` |  |
+| `SLA` |  |
+| `dailyDown` |  |
+| `dailyDownSecs` |  |
+| `monthlyDown` |  |
+| `monthlyDownSecs` |  |
+| `nines` |  |
+| `quarterlyDown` |  |
+| `quarterlyDownSecs` |  |
+| `uptimeURL` |  |
+| `weeklyDown` |  |
+| `weeklyDownSecs` |  |
+| `yearlyDown` |  |
+| `yearlyDownSecs` |  |
 
 Operations: Load.
 
@@ -277,19 +278,19 @@ Create an instance: `api = client.Api()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `daily_down` | `str` |  |
-| `daily_down_sec` | `float` |  |
-| `monthly_down` | `str` |  |
-| `monthly_down_sec` | `float` |  |
-| `nine` | `str` |  |
-| `quarterly_down` | `str` |  |
-| `quarterly_down_sec` | `float` |  |
-| `sla` | `float` |  |
-| `uptime_url` | `str` |  |
-| `weekly_down` | `str` |  |
-| `weekly_down_sec` | `float` |  |
-| `yearly_down` | `str` |  |
-| `yearly_down_sec` | `float` |  |
+| `SLA` | `float` |  |
+| `dailyDown` | `str` |  |
+| `dailyDownSecs` | `float` |  |
+| `monthlyDown` | `str` |  |
+| `monthlyDownSecs` | `float` |  |
+| `nines` | `str` |  |
+| `quarterlyDown` | `str` |  |
+| `quarterlyDownSecs` | `float` |  |
+| `uptimeURL` | `str` |  |
+| `weeklyDown` | `str` |  |
+| `weeklyDownSecs` | `float` |  |
+| `yearlyDown` | `str` |  |
+| `yearlyDownSecs` | `float` |  |
 
 #### Example: Load
 

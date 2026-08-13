@@ -23,8 +23,8 @@ module SlaUptimeCalculatorTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("SLAUPTIMECALCULATOR_TEST_LIVE")
-    override = getenv("SLAUPTIMECALCULATOR_TEST_OVERRIDE")
+    live = getenv("SLA_UPTIME_CALCULATOR_TEST_LIVE")
+    override = getenv("SLA_UPTIME_CALCULATOR_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module SlaUptimeCalculatorTestRunner
       end
     end
 
-    explain = getenv("SLAUPTIMECALCULATOR_TEST_EXPLAIN")
-    m["SLAUPTIMECALCULATOR_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("SLA_UPTIME_CALCULATOR_TEST_EXPLAIN")
+    m["SLA_UPTIME_CALCULATOR_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

@@ -93,19 +93,19 @@ api = client.Api
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | `String` | No |  |
-| `daily_down_sec` | `Float` | No |  |
-| `monthly_down` | `String` | No |  |
-| `monthly_down_sec` | `Float` | No |  |
-| `nine` | `String` | No |  |
-| `quarterly_down` | `String` | No |  |
-| `quarterly_down_sec` | `Float` | No |  |
-| `sla` | `Float` | No |  |
-| `uptime_url` | `String` | No |  |
-| `weekly_down` | `String` | No |  |
-| `weekly_down_sec` | `Float` | No |  |
-| `yearly_down` | `String` | No |  |
-| `yearly_down_sec` | `Float` | No |  |
+| `SLA` | `Float` | No |  |
+| `dailyDown` | `String` | No |  |
+| `dailyDownSecs` | `Float` | No |  |
+| `monthlyDown` | `String` | No |  |
+| `monthlyDownSecs` | `Float` | No |  |
+| `nines` | `String` | No |  |
+| `quarterlyDown` | `String` | No |  |
+| `quarterlyDownSecs` | `Float` | No |  |
+| `uptimeURL` | `String` | No |  |
+| `weeklyDown` | `String` | No |  |
+| `weeklyDownSecs` | `Float` | No |  |
+| `yearlyDown` | `String` | No |  |
+| `yearlyDownSecs` | `Float` | No |  |
 
 ### Operations
 

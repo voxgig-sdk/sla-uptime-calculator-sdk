@@ -43,8 +43,8 @@ class SlaUptimeCalculatorTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('SLAUPTIMECALCULATOR_TEST_LIVE');
-        $override = self::getenv('SLAUPTIMECALCULATOR_TEST_OVERRIDE');
+        $live = self::getenv('SLA_UPTIME_CALCULATOR_TEST_LIVE');
+        $override = self::getenv('SLA_UPTIME_CALCULATOR_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class SlaUptimeCalculatorTestRunner
             }
         }
 
-        $explain = self::getenv('SLAUPTIMECALCULATOR_TEST_EXPLAIN');
+        $explain = self::getenv('SLA_UPTIME_CALCULATOR_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['SLAUPTIMECALCULATOR_TEST_EXPLAIN'] = $explain;
+            $m['SLA_UPTIME_CALCULATOR_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

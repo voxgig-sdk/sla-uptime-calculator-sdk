@@ -116,19 +116,19 @@ const api = client.Api()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `daily_down` | `string` | No |  |
-| `daily_down_sec` | `number` | No |  |
-| `monthly_down` | `string` | No |  |
-| `monthly_down_sec` | `number` | No |  |
-| `nine` | `string` | No |  |
-| `quarterly_down` | `string` | No |  |
-| `quarterly_down_sec` | `number` | No |  |
-| `sla` | `number` | No |  |
-| `uptime_url` | `string` | No |  |
-| `weekly_down` | `string` | No |  |
-| `weekly_down_sec` | `number` | No |  |
-| `yearly_down` | `string` | No |  |
-| `yearly_down_sec` | `number` | No |  |
+| `SLA` | `number` | No |  |
+| `dailyDown` | `string` | No |  |
+| `dailyDownSecs` | `number` | No |  |
+| `monthlyDown` | `string` | No |  |
+| `monthlyDownSecs` | `number` | No |  |
+| `nines` | `string` | No |  |
+| `quarterlyDown` | `string` | No |  |
+| `quarterlyDownSecs` | `number` | No |  |
+| `uptimeURL` | `string` | No |  |
+| `weeklyDown` | `string` | No |  |
+| `weeklyDownSecs` | `number` | No |  |
+| `yearlyDown` | `string` | No |  |
+| `yearlyDownSecs` | `number` | No |  |
 
 ### Operations
 

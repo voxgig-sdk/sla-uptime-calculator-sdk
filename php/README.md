@@ -35,7 +35,7 @@ $client = new SlaUptimeCalculatorSDK();
 
 ```php
 try {
-    // load() returns the bare Api record (throws on error).
+    // load() returns the ENTITY — call data_get() for the Api record (throws on error).
     $api = $client->Api()->load();
     print_r($api);
 } catch (\Throwable $err) {
@@ -123,7 +123,8 @@ Create a mock client for unit testing — no server required:
 ```php
 $client = SlaUptimeCalculatorSDK::test();
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $api = $client->Api()->load();
 print_r($api);
 ```
@@ -222,7 +223,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -244,19 +245,19 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `daily_down` |  |
-| `daily_down_sec` |  |
-| `monthly_down` |  |
-| `monthly_down_sec` |  |
-| `nine` |  |
-| `quarterly_down` |  |
-| `quarterly_down_sec` |  |
-| `sla` |  |
-| `uptime_url` |  |
-| `weekly_down` |  |
-| `weekly_down_sec` |  |
-| `yearly_down` |  |
-| `yearly_down_sec` |  |
+| `SLA` |  |
+| `dailyDown` |  |
+| `dailyDownSecs` |  |
+| `monthlyDown` |  |
+| `monthlyDownSecs` |  |
+| `nines` |  |
+| `quarterlyDown` |  |
+| `quarterlyDownSecs` |  |
+| `uptimeURL` |  |
+| `weeklyDown` |  |
+| `weeklyDownSecs` |  |
+| `yearlyDown` |  |
+| `yearlyDownSecs` |  |
 
 Operations: Load.
 
@@ -281,24 +282,24 @@ Create an instance: `$api = $client->Api();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `daily_down` | `string` |  |
-| `daily_down_sec` | `float` |  |
-| `monthly_down` | `string` |  |
-| `monthly_down_sec` | `float` |  |
-| `nine` | `string` |  |
-| `quarterly_down` | `string` |  |
-| `quarterly_down_sec` | `float` |  |
-| `sla` | `float` |  |
-| `uptime_url` | `string` |  |
-| `weekly_down` | `string` |  |
-| `weekly_down_sec` | `float` |  |
-| `yearly_down` | `string` |  |
-| `yearly_down_sec` | `float` |  |
+| `SLA` | `float` |  |
+| `dailyDown` | `string` |  |
+| `dailyDownSecs` | `float` |  |
+| `monthlyDown` | `string` |  |
+| `monthlyDownSecs` | `float` |  |
+| `nines` | `string` |  |
+| `quarterlyDown` | `string` |  |
+| `quarterlyDownSecs` | `float` |  |
+| `uptimeURL` | `string` |  |
+| `weeklyDown` | `string` |  |
+| `weeklyDownSecs` | `float` |  |
+| `yearlyDown` | `string` |  |
+| `yearlyDownSecs` | `float` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Api record (throws on error).
+// load() returns the ENTITY — call data_get() for the Api record (throws on error).
 $api = $client->Api()->load();
 ```
 

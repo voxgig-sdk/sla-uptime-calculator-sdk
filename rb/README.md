@@ -34,7 +34,7 @@ client = SlaUptimeCalculatorSDK.new
 
 ```ruby
 begin
-  # load returns the bare Api record (raises on error).
+  # load returns the ENTITY — call data_get for the Api record (raises on error).
   api = client.Api.load()
   puts api
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = SlaUptimeCalculatorSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 api = client.Api.load()
 puts api
 ```
@@ -234,19 +235,19 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `daily_down` |  |
-| `daily_down_sec` |  |
-| `monthly_down` |  |
-| `monthly_down_sec` |  |
-| `nine` |  |
-| `quarterly_down` |  |
-| `quarterly_down_sec` |  |
-| `sla` |  |
-| `uptime_url` |  |
-| `weekly_down` |  |
-| `weekly_down_sec` |  |
-| `yearly_down` |  |
-| `yearly_down_sec` |  |
+| `SLA` |  |
+| `dailyDown` |  |
+| `dailyDownSecs` |  |
+| `monthlyDown` |  |
+| `monthlyDownSecs` |  |
+| `nines` |  |
+| `quarterlyDown` |  |
+| `quarterlyDownSecs` |  |
+| `uptimeURL` |  |
+| `weeklyDown` |  |
+| `weeklyDownSecs` |  |
+| `yearlyDown` |  |
+| `yearlyDownSecs` |  |
 
 Operations: Load.
 
@@ -271,24 +272,24 @@ Create an instance: `api = client.Api`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `daily_down` | `String` |  |
-| `daily_down_sec` | `Float` |  |
-| `monthly_down` | `String` |  |
-| `monthly_down_sec` | `Float` |  |
-| `nine` | `String` |  |
-| `quarterly_down` | `String` |  |
-| `quarterly_down_sec` | `Float` |  |
-| `sla` | `Float` |  |
-| `uptime_url` | `String` |  |
-| `weekly_down` | `String` |  |
-| `weekly_down_sec` | `Float` |  |
-| `yearly_down` | `String` |  |
-| `yearly_down_sec` | `Float` |  |
+| `SLA` | `Float` |  |
+| `dailyDown` | `String` |  |
+| `dailyDownSecs` | `Float` |  |
+| `monthlyDown` | `String` |  |
+| `monthlyDownSecs` | `Float` |  |
+| `nines` | `String` |  |
+| `quarterlyDown` | `String` |  |
+| `quarterlyDownSecs` | `Float` |  |
+| `uptimeURL` | `String` |  |
+| `weeklyDown` | `String` |  |
+| `weeklyDownSecs` | `Float` |  |
+| `yearlyDown` | `String` |  |
+| `yearlyDownSecs` | `Float` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Api record (raises on error).
+# load returns the ENTITY — call data_get for the Api record (raises on error).
 api = client.Api.load()
 ```
 

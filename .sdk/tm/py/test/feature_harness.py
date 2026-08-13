@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import SlaUptimeCalculatorControl
-from core.error import SlaUptimeCalculatorError
-from core.result import SlaUptimeCalculatorResult
-from core.spec import SlaUptimeCalculatorSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import SlaUptimeCalculatorControl
+from projectname_sdk.core.error import SlaUptimeCalculatorError
+from projectname_sdk.core.result import SlaUptimeCalculatorResult
+from projectname_sdk.core.spec import SlaUptimeCalculatorSpec
 
 
 # True when this SDK was generated with the named feature.

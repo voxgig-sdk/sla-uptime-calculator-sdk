@@ -6,67 +6,67 @@ main: kit: entity: api: {
 
   fields: [
     {
-      name: "daily_down"
-      req: false
-      type: "`$STRING`"
-    }
-    {
-      name: "daily_down_sec"
+      name: "SLA"
       req: false
       type: "`$NUMBER`"
     }
     {
-      name: "monthly_down"
+      name: "dailyDown"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "monthly_down_sec"
+      name: "dailyDownSecs"
       req: false
       type: "`$NUMBER`"
     }
     {
-      name: "nine"
+      name: "monthlyDown"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "quarterly_down"
-      req: false
-      type: "`$STRING`"
-    }
-    {
-      name: "quarterly_down_sec"
+      name: "monthlyDownSecs"
       req: false
       type: "`$NUMBER`"
     }
     {
-      name: "sla"
+      name: "nines"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "quarterlyDown"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "quarterlyDownSecs"
       req: false
       type: "`$NUMBER`"
     }
     {
-      name: "uptime_url"
+      name: "uptimeURL"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "weekly_down"
+      name: "weeklyDown"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "weekly_down_sec"
+      name: "weeklyDownSecs"
       req: false
       type: "`$NUMBER`"
     }
     {
-      name: "yearly_down"
+      name: "yearlyDown"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "yearly_down_sec"
+      name: "yearlyDownSecs"
       req: false
       type: "`$NUMBER`"
     }

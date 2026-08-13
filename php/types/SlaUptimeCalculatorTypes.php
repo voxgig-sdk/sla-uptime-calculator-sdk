@@ -15,36 +15,36 @@ declare(strict_types=1);
 /** Api entity data model. */
 class Api
 {
-    public ?string $daily_down = null;
-    public ?float $daily_down_sec = null;
-    public ?string $monthly_down = null;
-    public ?float $monthly_down_sec = null;
-    public ?string $nine = null;
-    public ?string $quarterly_down = null;
-    public ?float $quarterly_down_sec = null;
-    public ?float $sla = null;
-    public ?string $uptime_url = null;
-    public ?string $weekly_down = null;
-    public ?float $weekly_down_sec = null;
-    public ?string $yearly_down = null;
-    public ?float $yearly_down_sec = null;
+    public ?float $SLA = null;
+    public ?string $dailyDown = null;
+    public ?float $dailyDownSecs = null;
+    public ?string $monthlyDown = null;
+    public ?float $monthlyDownSecs = null;
+    public ?string $nines = null;
+    public ?string $quarterlyDown = null;
+    public ?float $quarterlyDownSecs = null;
+    public ?string $uptimeURL = null;
+    public ?string $weeklyDown = null;
+    public ?float $weeklyDownSecs = null;
+    public ?string $yearlyDown = null;
+    public ?float $yearlyDownSecs = null;
 }
 
 /** Request payload for Api#load. */
 class ApiLoadMatch
 {
-    public ?string $daily_down = null;
-    public ?float $daily_down_sec = null;
-    public ?string $monthly_down = null;
-    public ?float $monthly_down_sec = null;
-    public ?string $nine = null;
-    public ?string $quarterly_down = null;
-    public ?float $quarterly_down_sec = null;
-    public ?float $sla = null;
-    public ?string $uptime_url = null;
-    public ?string $weekly_down = null;
-    public ?float $weekly_down_sec = null;
-    public ?string $yearly_down = null;
-    public ?float $yearly_down_sec = null;
+    public ?float $SLA = null;
+    public ?string $dailyDown = null;
+    public ?float $dailyDownSecs = null;
+    public ?string $monthlyDown = null;
+    public ?float $monthlyDownSecs = null;
+    public ?string $nines = null;
+    public ?string $quarterlyDown = null;
+    public ?float $quarterlyDownSecs = null;
+    public ?string $uptimeURL = null;
+    public ?string $weeklyDown = null;
+    public ?float $weeklyDownSecs = null;
+    public ?string $yearlyDown = null;
+    public ?float $yearlyDownSecs = null;
 }
 

@@ -7,34 +7,34 @@
 -- edit by hand.
 
 ---@class Api
----@field daily_down? string
----@field daily_down_sec? number
----@field monthly_down? string
----@field monthly_down_sec? number
----@field nine? string
----@field quarterly_down? string
----@field quarterly_down_sec? number
----@field sla? number
----@field uptime_url? string
----@field weekly_down? string
----@field weekly_down_sec? number
----@field yearly_down? string
----@field yearly_down_sec? number
+---@field SLA? number
+---@field dailyDown? string
+---@field dailyDownSecs? number
+---@field monthlyDown? string
+---@field monthlyDownSecs? number
+---@field nines? string
+---@field quarterlyDown? string
+---@field quarterlyDownSecs? number
+---@field uptimeURL? string
+---@field weeklyDown? string
+---@field weeklyDownSecs? number
+---@field yearlyDown? string
+---@field yearlyDownSecs? number
 
 ---@class ApiLoadMatch
----@field daily_down? string
----@field daily_down_sec? number
----@field monthly_down? string
----@field monthly_down_sec? number
----@field nine? string
----@field quarterly_down? string
----@field quarterly_down_sec? number
----@field sla? number
----@field uptime_url? string
----@field weekly_down? string
----@field weekly_down_sec? number
----@field yearly_down? string
----@field yearly_down_sec? number
+---@field SLA? number
+---@field dailyDown? string
+---@field dailyDownSecs? number
+---@field monthlyDown? string
+---@field monthlyDownSecs? number
+---@field nines? string
+---@field quarterlyDown? string
+---@field quarterlyDownSecs? number
+---@field uptimeURL? string
+---@field weeklyDown? string
+---@field weeklyDownSecs? number
+---@field yearlyDown? string
+---@field yearlyDownSecs? number
 
 local M = {}
 

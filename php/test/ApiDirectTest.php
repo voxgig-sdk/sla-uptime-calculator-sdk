@@ -65,11 +65,11 @@ function api_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "SLAUPTIMECALCULATOR_TEST_API_ENTID" => [],
-        "SLAUPTIMECALCULATOR_TEST_LIVE" => "FALSE",
+        "SLA_UPTIME_CALCULATOR_TEST_API_ENTID" => [],
+        "SLA_UPTIME_CALCULATOR_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["SLAUPTIMECALCULATOR_TEST_LIVE"] === "TRUE";
+    $live = $env["SLA_UPTIME_CALCULATOR_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

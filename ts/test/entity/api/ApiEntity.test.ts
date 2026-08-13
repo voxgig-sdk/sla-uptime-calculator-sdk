@@ -26,8 +26,8 @@ import {
 describe('ApiEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when SLAUPTIMECALCULATOR_TEST_LIVE=TRUE.
-  afterEach(liveDelay('SLAUPTIMECALCULATOR_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when SLA_UPTIME_CALCULATOR_TEST_LIVE=TRUE.
+  afterEach(liveDelay('SLA_UPTIME_CALCULATOR_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = SlaUptimeCalculatorSDK.test()
@@ -62,7 +62,7 @@ describe('ApiEntity', async () => {
     // LOAD
     const api_ref01_ent = client.Api()
     const api_ref01_match_dt0: any = {}
-    const api_ref01_data_dt0 = await api_ref01_ent.load(api_ref01_match_dt0)
+    const api_ref01_data_dt0 = (await api_ref01_ent.load(api_ref01_match_dt0)).data()
     assert(null != api_ref01_data_dt0)
 
 

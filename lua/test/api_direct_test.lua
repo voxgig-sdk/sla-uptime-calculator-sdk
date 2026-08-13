@@ -60,11 +60,11 @@ function api_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["SLAUPTIMECALCULATOR_TEST_API_ENTID"] = {},
-    ["SLAUPTIMECALCULATOR_TEST_LIVE"] = "FALSE",
+    ["SLA_UPTIME_CALCULATOR_TEST_API_ENTID"] = {},
+    ["SLA_UPTIME_CALCULATOR_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["SLAUPTIMECALCULATOR_TEST_LIVE"] == "TRUE"
+  local live = env["SLA_UPTIME_CALCULATOR_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

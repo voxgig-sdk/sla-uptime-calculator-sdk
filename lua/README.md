@@ -225,19 +225,19 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `daily_down` |  |
-| `daily_down_sec` |  |
-| `monthly_down` |  |
-| `monthly_down_sec` |  |
-| `nine` |  |
-| `quarterly_down` |  |
-| `quarterly_down_sec` |  |
-| `sla` |  |
-| `uptime_url` |  |
-| `weekly_down` |  |
-| `weekly_down_sec` |  |
-| `yearly_down` |  |
-| `yearly_down_sec` |  |
+| `SLA` |  |
+| `dailyDown` |  |
+| `dailyDownSecs` |  |
+| `monthlyDown` |  |
+| `monthlyDownSecs` |  |
+| `nines` |  |
+| `quarterlyDown` |  |
+| `quarterlyDownSecs` |  |
+| `uptimeURL` |  |
+| `weeklyDown` |  |
+| `weeklyDownSecs` |  |
+| `yearlyDown` |  |
+| `yearlyDownSecs` |  |
 
 Operations: Load.
 
@@ -262,19 +262,19 @@ Create an instance: `local api = client:Api(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `daily_down` | `string` |  |
-| `daily_down_sec` | `number` |  |
-| `monthly_down` | `string` |  |
-| `monthly_down_sec` | `number` |  |
-| `nine` | `string` |  |
-| `quarterly_down` | `string` |  |
-| `quarterly_down_sec` | `number` |  |
-| `sla` | `number` |  |
-| `uptime_url` | `string` |  |
-| `weekly_down` | `string` |  |
-| `weekly_down_sec` | `number` |  |
-| `yearly_down` | `string` |  |
-| `yearly_down_sec` | `number` |  |
+| `SLA` | `number` |  |
+| `dailyDown` | `string` |  |
+| `dailyDownSecs` | `number` |  |
+| `monthlyDown` | `string` |  |
+| `monthlyDownSecs` | `number` |  |
+| `nines` | `string` |  |
+| `quarterlyDown` | `string` |  |
+| `quarterlyDownSecs` | `number` |  |
+| `uptimeURL` | `string` |  |
+| `weeklyDown` | `string` |  |
+| `weeklyDownSecs` | `number` |  |
+| `yearlyDown` | `string` |  |
+| `yearlyDownSecs` | `number` |  |
 
 #### Example: Load
 

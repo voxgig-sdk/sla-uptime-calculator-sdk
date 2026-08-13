@@ -6,34 +6,34 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Api {
-  daily_down?: string
-  daily_down_sec?: number
-  monthly_down?: string
-  monthly_down_sec?: number
-  nine?: string
-  quarterly_down?: string
-  quarterly_down_sec?: number
-  sla?: number
-  uptime_url?: string
-  weekly_down?: string
-  weekly_down_sec?: number
-  yearly_down?: string
-  yearly_down_sec?: number
+  SLA?: number
+  dailyDown?: string
+  dailyDownSecs?: number
+  monthlyDown?: string
+  monthlyDownSecs?: number
+  nines?: string
+  quarterlyDown?: string
+  quarterlyDownSecs?: number
+  uptimeURL?: string
+  weeklyDown?: string
+  weeklyDownSecs?: number
+  yearlyDown?: string
+  yearlyDownSecs?: number
 }
 
 export interface ApiLoadMatch {
-  daily_down?: string
-  daily_down_sec?: number
-  monthly_down?: string
-  monthly_down_sec?: number
-  nine?: string
-  quarterly_down?: string
-  quarterly_down_sec?: number
-  sla?: number
-  uptime_url?: string
-  weekly_down?: string
-  weekly_down_sec?: number
-  yearly_down?: string
-  yearly_down_sec?: number
+  SLA?: number
+  dailyDown?: string
+  dailyDownSecs?: number
+  monthlyDown?: string
+  monthlyDownSecs?: number
+  nines?: string
+  quarterlyDown?: string
+  quarterlyDownSecs?: number
+  uptimeURL?: string
+  weeklyDown?: string
+  weeklyDownSecs?: number
+  yearlyDown?: string
+  yearlyDownSecs?: number
 }
 

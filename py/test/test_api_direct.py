@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from slauptimecalculator_sdk.utility.voxgig_struct import voxgig_struct as vs
 from slauptimecalculator_sdk import SlaUptimeCalculatorSDK
-from core import helpers
+from slauptimecalculator_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _api_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "SLAUPTIMECALCULATOR_TEST_API_ENTID": {},
-        "SLAUPTIMECALCULATOR_TEST_LIVE": "FALSE",
+        "SLA_UPTIME_CALCULATOR_TEST_API_ENTID": {},
+        "SLA_UPTIME_CALCULATOR_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("SLAUPTIMECALCULATOR_TEST_LIVE") == "TRUE"
+    live = env.get("SLA_UPTIME_CALCULATOR_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

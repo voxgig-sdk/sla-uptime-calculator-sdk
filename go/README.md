@@ -258,19 +258,19 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"daily_down"` |  |
-| `"daily_down_sec"` |  |
-| `"monthly_down"` |  |
-| `"monthly_down_sec"` |  |
-| `"nine"` |  |
-| `"quarterly_down"` |  |
-| `"quarterly_down_sec"` |  |
-| `"sla"` |  |
-| `"uptime_url"` |  |
-| `"weekly_down"` |  |
-| `"weekly_down_sec"` |  |
-| `"yearly_down"` |  |
-| `"yearly_down_sec"` |  |
+| `"SLA"` |  |
+| `"dailyDown"` |  |
+| `"dailyDownSecs"` |  |
+| `"monthlyDown"` |  |
+| `"monthlyDownSecs"` |  |
+| `"nines"` |  |
+| `"quarterlyDown"` |  |
+| `"quarterlyDownSecs"` |  |
+| `"uptimeURL"` |  |
+| `"weeklyDown"` |  |
+| `"weeklyDownSecs"` |  |
+| `"yearlyDown"` |  |
+| `"yearlyDownSecs"` |  |
 
 Operations: Load.
 
@@ -295,19 +295,19 @@ Create an instance: `api := client.Api(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `daily_down` | `string` |  |
-| `daily_down_sec` | `float64` |  |
-| `monthly_down` | `string` |  |
-| `monthly_down_sec` | `float64` |  |
-| `nine` | `string` |  |
-| `quarterly_down` | `string` |  |
-| `quarterly_down_sec` | `float64` |  |
-| `sla` | `float64` |  |
-| `uptime_url` | `string` |  |
-| `weekly_down` | `string` |  |
-| `weekly_down_sec` | `float64` |  |
-| `yearly_down` | `string` |  |
-| `yearly_down_sec` | `float64` |  |
+| `SLA` | `float64` |  |
+| `dailyDown` | `string` |  |
+| `dailyDownSecs` | `float64` |  |
+| `monthlyDown` | `string` |  |
+| `monthlyDownSecs` | `float64` |  |
+| `nines` | `string` |  |
+| `quarterlyDown` | `string` |  |
+| `quarterlyDownSecs` | `float64` |  |
+| `uptimeURL` | `string` |  |
+| `weeklyDown` | `string` |  |
+| `weeklyDownSecs` | `float64` |  |
+| `yearlyDown` | `string` |  |
+| `yearlyDownSecs` | `float64` |  |
 
 #### Example: Load
 
