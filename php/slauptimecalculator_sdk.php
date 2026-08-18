@@ -40,7 +40,7 @@ class SlaUptimeCalculatorSDK
         $utility = new SlaUptimeCalculatorUtility();
         $this->_utility = $utility;
 
-        $config = SlaUptimeCalculatorConfig::make_config();
+        $config = SlaUptimeCalculatorConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

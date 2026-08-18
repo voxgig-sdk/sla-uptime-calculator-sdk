@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://get.uptime.is',
+    base: "https://get.uptime.is",
 
     headers: {
       "content-type": "application/json"
@@ -55,95 +55,56 @@ class Config {
     "api": {
       "fields": [
         {
-          "active": true,
           "name": "SLA",
-          "req": false,
-          "type": "`$NUMBER`",
-          "index$": 0
+          "type": "`$NUMBER`"
         },
         {
-          "active": true,
           "name": "dailyDown",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "dailyDownSecs",
-          "req": false,
-          "type": "`$NUMBER`",
-          "index$": 2
+          "type": "`$NUMBER`"
         },
         {
-          "active": true,
           "name": "monthlyDown",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 3
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "monthlyDownSecs",
-          "req": false,
-          "type": "`$NUMBER`",
-          "index$": 4
+          "type": "`$NUMBER`"
         },
         {
-          "active": true,
           "name": "nines",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 5
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "quarterlyDown",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 6
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "quarterlyDownSecs",
-          "req": false,
-          "type": "`$NUMBER`",
-          "index$": 7
+          "type": "`$NUMBER`"
         },
         {
-          "active": true,
           "name": "uptimeURL",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 8
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "weeklyDown",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 9
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "weeklyDownSecs",
-          "req": false,
-          "type": "`$NUMBER`",
-          "index$": 10
+          "type": "`$NUMBER`"
         },
         {
-          "active": true,
           "name": "yearlyDown",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 11
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "yearlyDownSecs",
-          "req": false,
-          "type": "`$NUMBER`",
-          "index$": 12
+          "type": "`$NUMBER`"
         }
       ],
       "name": "api",
@@ -153,20 +114,16 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {
                 "query": [
                   {
-                    "active": true,
                     "example": "1h20m",
                     "kind": "query",
                     "name": "down",
                     "orig": "down",
-                    "reqd": false,
                     "type": "`$STRING`"
                   },
                   {
-                    "active": true,
                     "example": [
                       8,
                       8,
@@ -179,16 +136,13 @@ class Config {
                     "kind": "query",
                     "name": "dur",
                     "orig": "dur",
-                    "reqd": false,
                     "type": "`$ARRAY`"
                   },
                   {
-                    "active": true,
                     "example": 99.9,
                     "kind": "query",
                     "name": "sla",
                     "orig": "sla",
-                    "reqd": false,
                     "type": "`$NUMBER`"
                   }
                 ]
@@ -209,11 +163,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

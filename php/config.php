@@ -5,6 +5,29 @@ declare(strict_types=1);
 
 class SlaUptimeCalculatorConfig
 {
+    /** @var array<string,mixed>|null */
+    private static ?array $shared_config = null;
+
+    /**
+     * Return the process-wide config, built once on first use. The SDK reads
+     * the config on every request and never writes to it, so one instance is
+     * shared by every client rather than rebuilt per client.
+     *
+     * PHP arrays are copy-on-write, so callers that do mutate the result get
+     * their own copy and cannot disturb the shared one.
+     */
+    public static function shared_config(): array
+    {
+        if (self::$shared_config === null) {
+            self::$shared_config = self::make_config();
+        }
+        return self::$shared_config;
+    }
+
+    /**
+     * Build a fresh, fully materialised config array. Every call rebuilds the
+     * whole structure, so prefer shared_config unless you need a private copy.
+     */
     public static function make_config(): array
     {
         return [
@@ -31,95 +54,56 @@ class SlaUptimeCalculatorConfig
         'api' => [
           'fields' => [
             [
-              'active' => true,
               'name' => 'SLA',
-              'req' => false,
               'type' => '`$NUMBER`',
-              'index$' => 0,
             ],
             [
-              'active' => true,
               'name' => 'dailyDown',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 1,
             ],
             [
-              'active' => true,
               'name' => 'dailyDownSecs',
-              'req' => false,
               'type' => '`$NUMBER`',
-              'index$' => 2,
             ],
             [
-              'active' => true,
               'name' => 'monthlyDown',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 3,
             ],
             [
-              'active' => true,
               'name' => 'monthlyDownSecs',
-              'req' => false,
               'type' => '`$NUMBER`',
-              'index$' => 4,
             ],
             [
-              'active' => true,
               'name' => 'nines',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 5,
             ],
             [
-              'active' => true,
               'name' => 'quarterlyDown',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 6,
             ],
             [
-              'active' => true,
               'name' => 'quarterlyDownSecs',
-              'req' => false,
               'type' => '`$NUMBER`',
-              'index$' => 7,
             ],
             [
-              'active' => true,
               'name' => 'uptimeURL',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 8,
             ],
             [
-              'active' => true,
               'name' => 'weeklyDown',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 9,
             ],
             [
-              'active' => true,
               'name' => 'weeklyDownSecs',
-              'req' => false,
               'type' => '`$NUMBER`',
-              'index$' => 10,
             ],
             [
-              'active' => true,
               'name' => 'yearlyDown',
-              'req' => false,
               'type' => '`$STRING`',
-              'index$' => 11,
             ],
             [
-              'active' => true,
               'name' => 'yearlyDownSecs',
-              'req' => false,
               'type' => '`$NUMBER`',
-              'index$' => 12,
             ],
           ],
           'name' => 'api',
@@ -129,20 +113,16 @@ class SlaUptimeCalculatorConfig
               'name' => 'load',
               'points' => [
                 [
-                  'active' => true,
                   'args' => [
                     'query' => [
                       [
-                        'active' => true,
                         'example' => '1h20m',
                         'kind' => 'query',
                         'name' => 'down',
                         'orig' => 'down',
-                        'reqd' => false,
                         'type' => '`$STRING`',
                       ],
                       [
-                        'active' => true,
                         'example' => [
                           8,
                           8,
@@ -155,16 +135,13 @@ class SlaUptimeCalculatorConfig
                         'kind' => 'query',
                         'name' => 'dur',
                         'orig' => 'dur',
-                        'reqd' => false,
                         'type' => '`$ARRAY`',
                       ],
                       [
-                        'active' => true,
                         'example' => 99.9,
                         'kind' => 'query',
                         'name' => 'sla',
                         'orig' => 'sla',
-                        'reqd' => false,
                         'type' => '`$NUMBER`',
                       ],
                     ],
@@ -186,10 +163,8 @@ class SlaUptimeCalculatorConfig
                     'req' => '`reqdata`',
                     'res' => '`body`',
                   ],
-                  'index$' => 0,
                 ],
               ],
-              'key$' => 'load',
             ],
           ],
           'relations' => [

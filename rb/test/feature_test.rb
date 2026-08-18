@@ -15,7 +15,7 @@ require_relative "../SlaUptimeCalculator_sdk"
 module SlaUptimeCalculatorFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = SlaUptimeCalculatorConfig.make_config["feature"]
+    f = SlaUptimeCalculatorConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

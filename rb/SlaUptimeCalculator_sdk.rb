@@ -28,7 +28,7 @@ class SlaUptimeCalculatorSDK
     utility = SlaUptimeCalculatorUtility.new
     @_utility = utility
 
-    config = SlaUptimeCalculatorConfig.make_config
+    config = SlaUptimeCalculatorConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
