@@ -19,6 +19,9 @@ module SlaUptimeCalculatorConfig
     {
       "main" => {
         "name" => "SlaUptimeCalculator",
+        "slug" => "sla-uptime-calculator",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
