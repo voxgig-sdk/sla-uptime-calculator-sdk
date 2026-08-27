@@ -28,6 +28,7 @@ module SlaUptimeCalculatorConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
