@@ -22,18 +22,8 @@ export interface Api {
 }
 
 export interface ApiLoadMatch {
-  SLA?: number
-  dailyDown?: string
-  dailyDownSecs?: number
-  monthlyDown?: string
-  monthlyDownSecs?: number
-  nines?: string
-  quarterlyDown?: string
-  quarterlyDownSecs?: number
-  uptimeURL?: string
-  weeklyDown?: string
-  weeklyDownSecs?: number
-  yearlyDown?: string
-  yearlyDownSecs?: number
+  down?: string
+  dur?: any[]
+  sla?: number
 }
 

@@ -67,58 +67,18 @@ Api = Struct.new(
 
 # Request payload for Api#load.
 #
-# @!attribute [rw] SLA
-#   @return [Float, nil]
-#
-# @!attribute [rw] dailyDown
+# @!attribute [rw] down
 #   @return [String, nil]
 #
-# @!attribute [rw] dailyDownSecs
-#   @return [Float, nil]
+# @!attribute [rw] dur
+#   @return [Array, nil]
 #
-# @!attribute [rw] monthlyDown
-#   @return [String, nil]
-#
-# @!attribute [rw] monthlyDownSecs
-#   @return [Float, nil]
-#
-# @!attribute [rw] nines
-#   @return [String, nil]
-#
-# @!attribute [rw] quarterlyDown
-#   @return [String, nil]
-#
-# @!attribute [rw] quarterlyDownSecs
-#   @return [Float, nil]
-#
-# @!attribute [rw] uptimeURL
-#   @return [String, nil]
-#
-# @!attribute [rw] weeklyDown
-#   @return [String, nil]
-#
-# @!attribute [rw] weeklyDownSecs
-#   @return [Float, nil]
-#
-# @!attribute [rw] yearlyDown
-#   @return [String, nil]
-#
-# @!attribute [rw] yearlyDownSecs
+# @!attribute [rw] sla
 #   @return [Float, nil]
 ApiLoadMatch = Struct.new(
-  :SLA,
-  :dailyDown,
-  :dailyDownSecs,
-  :monthlyDown,
-  :monthlyDownSecs,
-  :nines,
-  :quarterlyDown,
-  :quarterlyDownSecs,
-  :uptimeURL,
-  :weeklyDown,
-  :weeklyDownSecs,
-  :yearlyDown,
-  :yearlyDownSecs,
+  :down,
+  :dur,
+  :sla,
   keyword_init: true
 )
 

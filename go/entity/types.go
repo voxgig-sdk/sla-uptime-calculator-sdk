@@ -31,19 +31,9 @@ type Api struct {
 
 // ApiLoadMatch is the typed request payload for Api.LoadTyped.
 type ApiLoadMatch struct {
-	SLA *float64 `json:"SLA,omitempty"`
-	DailyDown *string `json:"dailyDown,omitempty"`
-	DailyDownSecs *float64 `json:"dailyDownSecs,omitempty"`
-	MonthlyDown *string `json:"monthlyDown,omitempty"`
-	MonthlyDownSecs *float64 `json:"monthlyDownSecs,omitempty"`
-	Nines *string `json:"nines,omitempty"`
-	QuarterlyDown *string `json:"quarterlyDown,omitempty"`
-	QuarterlyDownSecs *float64 `json:"quarterlyDownSecs,omitempty"`
-	UptimeURL *string `json:"uptimeURL,omitempty"`
-	WeeklyDown *string `json:"weeklyDown,omitempty"`
-	WeeklyDownSecs *float64 `json:"weeklyDownSecs,omitempty"`
-	YearlyDown *string `json:"yearlyDown,omitempty"`
-	YearlyDownSecs *float64 `json:"yearlyDownSecs,omitempty"`
+	Down *string `json:"down,omitempty"`
+	Dur *[]any `json:"dur,omitempty"`
+	Sla *float64 `json:"sla,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

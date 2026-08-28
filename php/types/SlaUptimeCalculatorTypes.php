@@ -33,18 +33,8 @@ class Api
 /** Request payload for Api#load. */
 class ApiLoadMatch
 {
-    public ?float $SLA = null;
-    public ?string $dailyDown = null;
-    public ?float $dailyDownSecs = null;
-    public ?string $monthlyDown = null;
-    public ?float $monthlyDownSecs = null;
-    public ?string $nines = null;
-    public ?string $quarterlyDown = null;
-    public ?float $quarterlyDownSecs = null;
-    public ?string $uptimeURL = null;
-    public ?string $weeklyDown = null;
-    public ?float $weeklyDownSecs = null;
-    public ?string $yearlyDown = null;
-    public ?float $yearlyDownSecs = null;
+    public ?string $down = null;
+    public ?array $dur = null;
+    public ?float $sla = null;
 }
 

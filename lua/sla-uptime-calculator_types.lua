@@ -22,19 +22,9 @@
 ---@field yearlyDownSecs? number
 
 ---@class ApiLoadMatch
----@field SLA? number
----@field dailyDown? string
----@field dailyDownSecs? number
----@field monthlyDown? string
----@field monthlyDownSecs? number
----@field nines? string
----@field quarterlyDown? string
----@field quarterlyDownSecs? number
----@field uptimeURL? string
----@field weeklyDown? string
----@field weeklyDownSecs? number
----@field yearlyDown? string
----@field yearlyDownSecs? number
+---@field down? string
+---@field dur? table
+---@field sla? number
 
 local M = {}
 

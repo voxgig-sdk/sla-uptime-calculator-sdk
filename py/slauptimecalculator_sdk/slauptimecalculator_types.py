@@ -33,16 +33,6 @@ class Api(TypedDict, total=False):
 
 
 class ApiLoadMatch(TypedDict, total=False):
-    SLA: float
-    dailyDown: str
-    dailyDownSecs: float
-    monthlyDown: str
-    monthlyDownSecs: float
-    nines: str
-    quarterlyDown: str
-    quarterlyDownSecs: float
-    uptimeURL: str
-    weeklyDown: str
-    weeklyDownSecs: float
-    yearlyDown: str
-    yearlyDownSecs: float
+    down: str
+    dur: list
+    sla: float
