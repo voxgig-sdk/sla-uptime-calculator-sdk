@@ -139,8 +139,10 @@ module SlaUptimeCalculatorConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api",
-                  "parts" => [
-                    "api",
+                  "segments" => [
+                    {
+                      "lit" => "api",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -153,6 +155,9 @@ module SlaUptimeCalculatorConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "api",
+                  ],
                 },
               ],
             },
