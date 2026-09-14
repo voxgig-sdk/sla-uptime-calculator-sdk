@@ -105,7 +105,7 @@ local result, err = client:Api():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
+| TypeScript | `@voxgig-sdk/sla-uptime-calculator-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
 | Python | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
 | PHP | `voxgig-sdk/sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/sla-uptime-calculator-sdk/go` | `go get github.com/voxgig-sdk/sla-uptime-calculator-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Api():load()
 ### TypeScript
 
 ```ts
-import { SlaUptimeCalculatorSDK } from '@voxgig-sdk/sla-uptime-calculator'
+import { SlaUptimeCalculatorSDK } from '@voxgig-sdk/sla-uptime-calculator-sdk'
 
 const client = new SlaUptimeCalculatorSDK()
 

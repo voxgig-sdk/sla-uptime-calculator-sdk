@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { SlaUptimeCalculatorSDK } from '@voxgig-sdk/sla-uptime-calculator'
+import { SlaUptimeCalculatorSDK } from '@voxgig-sdk/sla-uptime-calculator-sdk'
 
 const client = new SlaUptimeCalculatorSDK()
 ```
@@ -425,7 +425,7 @@ sla-uptime-calculator/
 Import the SDK from the package root:
 
 ```ts
-import { SlaUptimeCalculatorSDK } from '@voxgig-sdk/sla-uptime-calculator'
+import { SlaUptimeCalculatorSDK } from '@voxgig-sdk/sla-uptime-calculator-sdk'
 ```
 
 ### Entity state
