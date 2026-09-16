@@ -1,12 +1,18 @@
 # SlaUptimeCalculator SDK feature factory
 
 from slauptimecalculator_sdk.feature.base_feature import SlaUptimeCalculatorBaseFeature
+from slauptimecalculator_sdk.feature.ratelimit_feature import SlaUptimeCalculatorRatelimitFeature
+from slauptimecalculator_sdk.feature.retry_feature import SlaUptimeCalculatorRetryFeature
 from slauptimecalculator_sdk.feature.test_feature import SlaUptimeCalculatorTestFeature
+from slauptimecalculator_sdk.feature.timeout_feature import SlaUptimeCalculatorTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: SlaUptimeCalculatorBaseFeature(),
+    "ratelimit": lambda: SlaUptimeCalculatorRatelimitFeature(),
+    "retry": lambda: SlaUptimeCalculatorRetryFeature(),
     "test": lambda: SlaUptimeCalculatorTestFeature(),
+    "timeout": lambda: SlaUptimeCalculatorTimeoutFeature(),
 }
 
 
