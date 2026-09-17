@@ -105,12 +105,12 @@ local result, err = client:Api():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/sla-uptime-calculator-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
-| Python | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
-| PHP | `voxgig-sdk/sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
+| TypeScript | `@voxgig-sdk/sla-uptime-calculator-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/tags) |
+| Python | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/tags) |
+| PHP | `voxgig-sdk/sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/sla-uptime-calculator-sdk/go` | `go get github.com/voxgig-sdk/sla-uptime-calculator-sdk/go@latest` |
-| Ruby | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
-| Lua | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/releases) |
+| Ruby | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/tags) |
+| Lua | `voxgig-sdk-sla-uptime-calculator` | publish pending — [install from git tag](https://github.com/voxgig-sdk/sla-uptime-calculator-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/sla-uptime-calculator-sdk/go-cli` | `go install github.com/voxgig-sdk/sla-uptime-calculator-sdk/go-cli/cmd/sla-uptime-calculator@latest` |
 | Go MCP server | `github.com/voxgig-sdk/sla-uptime-calculator-sdk/go-mcp` | `go get github.com/voxgig-sdk/sla-uptime-calculator-sdk/go-mcp@latest` |
 
