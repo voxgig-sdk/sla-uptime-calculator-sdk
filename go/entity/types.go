@@ -1,7 +1,7 @@
 // Typed models for the SlaUptimeCalculator SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,19 +14,6 @@ import (
 
 // Api is the typed data model for the api entity.
 type Api struct {
-	SLA *float64 `json:"SLA,omitempty"`
-	DailyDown *string `json:"dailyDown,omitempty"`
-	DailyDownSecs *float64 `json:"dailyDownSecs,omitempty"`
-	MonthlyDown *string `json:"monthlyDown,omitempty"`
-	MonthlyDownSecs *float64 `json:"monthlyDownSecs,omitempty"`
-	Nines *string `json:"nines,omitempty"`
-	QuarterlyDown *string `json:"quarterlyDown,omitempty"`
-	QuarterlyDownSecs *float64 `json:"quarterlyDownSecs,omitempty"`
-	UptimeURL *string `json:"uptimeURL,omitempty"`
-	WeeklyDown *string `json:"weeklyDown,omitempty"`
-	WeeklyDownSecs *float64 `json:"weeklyDownSecs,omitempty"`
-	YearlyDown *string `json:"yearlyDown,omitempty"`
-	YearlyDownSecs *float64 `json:"yearlyDownSecs,omitempty"`
 }
 
 // ApiLoadMatch is the typed request payload for Api.LoadTyped.

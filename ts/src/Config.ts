@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -139,54 +132,67 @@ class Config {
       "fields": [
         {
           "name": "SLA",
+          "title": "Sla",
           "type": "`$NUMBER`"
         },
         {
           "name": "dailyDown",
+          "title": "Daily Down",
           "type": "`$STRING`"
         },
         {
           "name": "dailyDownSecs",
+          "title": "Daily Down Secs",
           "type": "`$NUMBER`"
         },
         {
           "name": "monthlyDown",
+          "title": "Monthly Down",
           "type": "`$STRING`"
         },
         {
           "name": "monthlyDownSecs",
+          "title": "Monthly Down Secs",
           "type": "`$NUMBER`"
         },
         {
           "name": "nines",
+          "title": "Nines",
           "type": "`$STRING`"
         },
         {
           "name": "quarterlyDown",
+          "title": "Quarterly Down",
           "type": "`$STRING`"
         },
         {
           "name": "quarterlyDownSecs",
+          "title": "Quarterly Down Secs",
           "type": "`$NUMBER`"
         },
         {
           "name": "uptimeURL",
+          "title": "Uptime Url",
           "type": "`$STRING`"
         },
         {
           "name": "weeklyDown",
+          "title": "Weekly Down",
           "type": "`$STRING`"
         },
         {
           "name": "weeklyDownSecs",
+          "title": "Weekly Down Secs",
           "type": "`$NUMBER`"
         },
         {
           "name": "yearlyDown",
+          "title": "Yearly Down",
           "type": "`$STRING`"
         },
         {
           "name": "yearlyDownSecs",
+          "title": "Yearly Down Secs",
           "type": "`$NUMBER`"
         }
       ],
@@ -197,39 +203,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "args": {
-                "query": [
-                  {
-                    "example": "1h20m",
-                    "kind": "query",
-                    "name": "down",
-                    "orig": "down",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "example": [
-                      8,
-                      8,
-                      8,
-                      8,
-                      8,
-                      0,
-                      0
-                    ],
-                    "kind": "query",
-                    "name": "dur",
-                    "orig": "dur",
-                    "type": "`$ARRAY`"
-                  },
-                  {
-                    "example": 99.9,
-                    "kind": "query",
-                    "name": "sla",
-                    "orig": "sla",
-                    "type": "`$NUMBER`"
-                  }
-                ]
-              },
               "kind": "http",
               "method": "GET",
               "orig": "/api",
@@ -238,20 +211,54 @@ class Config {
                   "lit": "api"
                 }
               ],
+              "parts": [
+                "api"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "query": [
+                  {
+                    "name": "down",
+                    "orig": "down",
+                    "type": "`$STRING`",
+                    "kind": "query",
+                    "example": "1h20m"
+                  },
+                  {
+                    "name": "dur",
+                    "orig": "dur",
+                    "type": "`$ARRAY`",
+                    "kind": "query",
+                    "example": [
+                      8,
+                      8,
+                      8,
+                      8,
+                      8,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "name": "sla",
+                    "orig": "sla",
+                    "type": "`$NUMBER`",
+                    "kind": "query",
+                    "example": 99.9
+                  }
+                ]
+              },
               "select": {
                 "exist": [
                   "down",
                   "dur",
                   "sla"
                 ]
-              },
-              "transform": {
-                "req": "`reqdata`",
-                "res": "`body`"
-              },
-              "parts": [
-                "api"
-              ]
+              }
             }
           ]
         }

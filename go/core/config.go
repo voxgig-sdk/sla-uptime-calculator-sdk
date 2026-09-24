@@ -91,54 +91,67 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "SLA",
+						"title": "Sla",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "dailyDown",
+						"title": "Daily Down",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "dailyDownSecs",
+						"title": "Daily Down Secs",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "monthlyDown",
+						"title": "Monthly Down",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "monthlyDownSecs",
+						"title": "Monthly Down Secs",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "nines",
+						"title": "Nines",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "quarterlyDown",
+						"title": "Quarterly Down",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "quarterlyDownSecs",
+						"title": "Quarterly Down Secs",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "uptimeURL",
+						"title": "Uptime Url",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "weeklyDown",
+						"title": "Weekly Down",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "weeklyDownSecs",
+						"title": "Weekly Down Secs",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "yearlyDown",
+						"title": "Yearly Down",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "yearlyDownSecs",
+						"title": "Yearly Down Secs",
 						"type": "`$NUMBER`",
 					},
 				},
@@ -149,16 +162,36 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
+								"kind": "http",
+								"method": "GET",
+								"orig": "/api",
+								"segments": []any{
+									map[string]any{
+										"lit": "api",
+									},
+								},
+								"parts": []any{
+									"api",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
 								"args": map[string]any{
 									"query": []any{
 										map[string]any{
-											"example": "1h20m",
-											"kind": "query",
 											"name": "down",
 											"orig": "down",
 											"type": "`$STRING`",
+											"kind": "query",
+											"example": "1h20m",
 										},
 										map[string]any{
+											"name": "dur",
+											"orig": "dur",
+											"type": "`$ARRAY`",
+											"kind": "query",
 											"example": []any{
 												8,
 												8,
@@ -168,26 +201,14 @@ func MakeConfig() map[string]any {
 												0,
 												0,
 											},
-											"kind": "query",
-											"name": "dur",
-											"orig": "dur",
-											"type": "`$ARRAY`",
 										},
 										map[string]any{
-											"example": 99.9,
-											"kind": "query",
 											"name": "sla",
 											"orig": "sla",
 											"type": "`$NUMBER`",
+											"kind": "query",
+											"example": 99.9,
 										},
-									},
-								},
-								"kind": "http",
-								"method": "GET",
-								"orig": "/api",
-								"segments": []any{
-									map[string]any{
-										"lit": "api",
 									},
 								},
 								"select": map[string]any{
@@ -196,13 +217,6 @@ func MakeConfig() map[string]any {
 										"dur",
 										"sla",
 									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
-								"parts": []any{
-									"api",
 								},
 							},
 						},

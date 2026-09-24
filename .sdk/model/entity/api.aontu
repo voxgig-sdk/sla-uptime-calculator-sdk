@@ -1,0 +1,160 @@
+# Entity: api
+
+main: kit: entity: api: {
+
+  alias: field: {}
+
+  fields: {
+    SLA: {
+      h: "Sla"
+      n: "SLA"
+      r: false
+      t: "`$NUMBER`"
+    }
+    dailyDown: {
+      h: "Daily Down"
+      n: "dailyDown"
+      r: false
+      t: "`$STRING`"
+    }
+    dailyDownSecs: {
+      h: "Daily Down Secs"
+      n: "dailyDownSecs"
+      r: false
+      t: "`$NUMBER`"
+    }
+    monthlyDown: {
+      h: "Monthly Down"
+      n: "monthlyDown"
+      r: false
+      t: "`$STRING`"
+    }
+    monthlyDownSecs: {
+      h: "Monthly Down Secs"
+      n: "monthlyDownSecs"
+      r: false
+      t: "`$NUMBER`"
+    }
+    nines: {
+      h: "Nines"
+      n: "nines"
+      r: false
+      t: "`$STRING`"
+    }
+    quarterlyDown: {
+      h: "Quarterly Down"
+      n: "quarterlyDown"
+      r: false
+      t: "`$STRING`"
+    }
+    quarterlyDownSecs: {
+      h: "Quarterly Down Secs"
+      n: "quarterlyDownSecs"
+      r: false
+      t: "`$NUMBER`"
+    }
+    uptimeURL: {
+      h: "Uptime Url"
+      n: "uptimeURL"
+      r: false
+      t: "`$STRING`"
+    }
+    weeklyDown: {
+      h: "Weekly Down"
+      n: "weeklyDown"
+      r: false
+      t: "`$STRING`"
+    }
+    weeklyDownSecs: {
+      h: "Weekly Down Secs"
+      n: "weeklyDownSecs"
+      r: false
+      t: "`$NUMBER`"
+    }
+    yearlyDown: {
+      h: "Yearly Down"
+      n: "yearlyDown"
+      r: false
+      t: "`$STRING`"
+    }
+    yearlyDownSecs: {
+      h: "Yearly Down Secs"
+      n: "yearlyDownSecs"
+      r: false
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "api"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "1h20m"
+                k: "query"
+                n: "down"
+                or: "down"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: [
+                  8
+                  8
+                  8
+                  8
+                  8
+                  0
+                  0
+                ]
+                k: "query"
+                n: "dur"
+                or: "dur"
+                r: false
+                t: "`$ARRAY`"
+              }
+              {
+                ex: 99.9
+                k: "query"
+                n: "sla"
+                or: "sla"
+                r: false
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api"
+          q: {
+            exist: [
+              "down"
+              "dur"
+              "sla"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
